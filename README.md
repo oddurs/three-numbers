@@ -191,6 +191,11 @@ The engine is complete and the book is an outline: **19 chapters in five parts,
 130,500 planned words. **12 figures** are drawn; the rest are named in the
 sections that need them. See [`docs/outline.md`](docs/outline.md).
 
+The route to a release candidate is planned in [`ROADMAP.md`](ROADMAP.md) —
+nine milestones, sixty-nine items, tracked as Markdown in
+[`cairn/items/`](cairn/items). The loop each chapter goes through is
+[`docs/writing-process.md`](docs/writing-process.md).
+
 Contributions, and especially corrections, are welcome:
 [`CONTRIBUTING.md`](CONTRIBUTING.md).
 

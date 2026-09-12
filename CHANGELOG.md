@@ -12,6 +12,14 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+
+- **A process-driven plan to the release candidate.** Nine milestones and
+  sixty-nine items, tracked with `cairn` as Markdown in the repository. The
+  statuses are a writing pipeline rather than a software one — research,
+  drafting and revision are separate stages on purpose — and every chapter item
+  carries the same checklist. `docs/writing-process.md` says why.
+
 ### Changed
 
 - **The outline is now per-chapter and owned by the engine.** One typed

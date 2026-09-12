@@ -11,6 +11,7 @@ Context for *Three Numbers* — the book, and the engine that builds it.
 | [`architecture.md`](architecture.md) | How the engine fits together |
 | [`authoring.md`](authoring.md) | How to add a chapter, a figure, a source |
 | [`research.md`](research.md) | The citation and claim system |
+| [`writing-process.md`](writing-process.md) | The loop each chapter goes through, and which gates are machine-checked |
 | [`releases.md`](releases.md) | How a release is cut and what a version number means |
 | [`decisions/`](decisions/) | Architecture decision records — the calls we made and what they cost |
 

@@ -1,0 +1,297 @@
+# cairn.toml — the schema for writing Three Numbers.
+#
+# This is a book, not a program, so the statuses are a writing pipeline rather
+# than a software one: a chapter is researched, then drafted, then revised, then
+# reviewed. `cairn board` is therefore a map of where every chapter actually is,
+# which is the one thing a long writing project loses track of first.
+#
+#   cairn board            where everything stands
+#   cairn next             what is ready to start
+#   cairn roadmap          progress towards the release
+#   cairn check            validate; run before reporting finished
+
+format = 3
+
+[project]
+name = "Three Numbers"
+dir = "cairn/items"
+id_width = 4
+default_type = "chapter"
+default_status = "backlog"
+url = "https://github.com/oddurs/three-numbers/blob/main"
+
+# ─── Item types ──────────────────────────────────────────────────────────────
+
+[[type]]
+name = "chapter"
+icon = "§"
+color = "cyan"
+# The per-chapter pipeline, carried by every chapter item so the process is the
+# same one every time and visible in the item rather than in someone's head.
+template = """
+## The argument
+
+<!-- One sentence: what this chapter has to establish. Copy from the outline's `lead`. -->
+
+## Before drafting
+
+- [ ] Read the evidence sheet: `node engine/cli.ts research evidence`
+- [ ] Every non-obvious claim traces to a distilled claim, or a source is added
+- [ ] Figures this chapter needs exist, or have their own items
+- [ ] Re-read the outline declaration; fix it now if the plan is wrong
+
+## Drafting
+
+- [ ] Prose written to the word budget, ±20%
+- [ ] `status: "drafting"` set in `outline/chNN.outline.ts` *before* writing
+      into `book/parts/`, or the next `outline sync` overwrites it
+- [ ] Every figure placed once, cross-referenced after
+- [ ] Exercises: three to five, at least one of each kind
+
+## Revising
+
+- [ ] Reassurance adverbs gone (honestly, genuinely, actually, precisely)
+- [ ] Em-dashes under ~3 per 1,000 words
+- [ ] No paragraph asserts something a reader could not check
+- [ ] Read aloud once, start to finish
+- [ ] `node engine/cli.ts check` green
+- [ ] `status: "written"` set in the outline declaration
+
+## Notes
+"""
+
+[[type]]
+name = "figure"
+icon = "▦"
+color = "magenta"
+template = """
+## What it must show
+
+<!-- The claim the figure makes. If it does not make one, it is decoration. -->
+
+## Data
+
+<!-- Which dataset or derivation. Nothing traced from another book. -->
+
+- [ ] Renders at its declared placement width
+- [ ] Direct labels rather than a legend, unless a legend carries more
+- [ ] No gridlines; range frame
+- [ ] Caption argues rather than describes
+- [ ] `check` green (width, glyph coverage, caption lint)
+"""
+
+[[type]]
+name = "research"
+icon = "¶"
+color = "yellow"
+template = """
+## The question
+
+## What to read
+
+- [ ] Source added with `cairn`-verified metadata (`cite add <doi|url>`)
+- [ ] "Why it matters" written
+- [ ] At least one claim distilled, with a locator and a confidence
+"""
+
+[[type]]
+name = "pass"
+icon = "↻"
+color = "blue"
+description = "An editorial sweep over the whole book, not one chapter"
+template = """
+## Scope
+
+<!-- Which chapters, and what exactly is being checked. -->
+
+## Method
+
+<!-- How it is done, so it can be repeated identically next time. -->
+
+## Findings
+"""
+
+[[type]]
+name = "engine"
+icon = "⚙"
+color = "gray"
+
+[[type]]
+name = "docs"
+icon = "*"
+color = "blue"
+
+[[type]]
+name = "milestone"
+groups = "one"
+inverse = "scheduled"
+description = "a release on the way to 1.0"
+
+# ─── Statuses: the writing pipeline ──────────────────────────────────────────
+#
+# A chapter moves left to right. The three active stages are deliberately
+# separate: research that happens during drafting produces prose shaped around
+# what was easy to find, and revision folded into drafting never happens.
+
+[[status]]
+name = "backlog"
+category = "open"
+color = "gray"
+
+[[status]]
+name = "planned"
+category = "open"
+color = "blue"
+
+[[status]]
+name = "researching"
+label = "research"
+category = "active"
+color = "yellow"
+
+[[status]]
+name = "drafting"
+label = "draft"
+category = "active"
+color = "cyan"
+
+[[status]]
+name = "revising"
+label = "revise"
+category = "active"
+color = "magenta"
+
+[[status]]
+name = "review"
+category = "active"
+color = "blue"
+
+[[status]]
+name = "blocked"
+category = "active"
+color = "red"
+
+[[status]]
+name = "done"
+category = "done"
+color = "green"
+
+[[status]]
+name = "dropped"
+category = "dropped"
+color = "gray"
+board = false
+
+# ─── Fields ──────────────────────────────────────────────────────────────────
+
+[[field]]
+name = "due"
+kind = "date"
+description = "when a milestone is meant to land"
+
+[[field]]
+name = "part_of"
+kind = "ref"
+target = "*"
+cardinality = "many"
+acyclic = true
+rollup = true
+inverse = "contains"
+description = "a larger piece of work this belongs to"
+
+[[field]]
+name = "priority"
+kind = "enum"
+values = ["p0", "p1", "p2", "p3"]
+default = "p2"
+column = true
+description = "p0 blocks the release"
+
+[[field]]
+name = "effort"
+kind = "enum"
+values = ["s", "m", "l", "xl"]
+description = "rough size, not an estimate"
+
+[[field]]
+name = "part"
+kind = "enum"
+values = ["I", "II", "III", "IV", "V", "front", "back", "whole"]
+description = "which part of the book this belongs to"
+
+[[field]]
+name = "chapter"
+kind = "text"
+column = true
+description = "the outline id, e.g. ch07"
+
+[[field]]
+name = "words"
+kind = "number"
+column = true
+description = "planned length, from the outline declaration"
+
+[[field]]
+name = "area"
+kind = "text"
+description = "subsystem, for engine work"
+
+# ─── Saved views ─────────────────────────────────────────────────────────────
+
+[[view]]
+name = "now"
+description = "What is actually being worked on"
+filter = "category=active"
+sort = "priority,id"
+
+[[view]]
+name = "next"
+description = "Planned and ready to start"
+filter = "status=planned"
+sort = "priority,id"
+
+[[view]]
+name = "chapters"
+description = "Every chapter and where it stands"
+filter = "type=chapter"
+sort = "id"
+columns = ["id", "status", "chapter", "title", "words"]
+
+[[view]]
+name = "figures"
+description = "Diagrams still to draw"
+filter = "type=figure,category!=done"
+sort = "priority,id"
+
+[[view]]
+name = "blockers"
+description = "Everything that must be true before 1.0"
+filter = "priority=p0,category!=done"
+sort = "id"
+
+[[view]]
+name = "triage"
+description = "Items with no milestone"
+filter = "milestone=,category!=done"
+columns = ["id", "type", "title", "created"]
+
+# ─── Hooks ───────────────────────────────────────────────────────────────────
+
+[hooks]
+after-create = "cairn render -q"
+after-change = "cairn render -q"
+after-remove = "cairn render -q"
+
+# ─── Rendered roadmap ────────────────────────────────────────────────────────
+
+[render]
+target = "ROADMAP.md"
+title = "Roadmap"
+group_by = "milestone"
+include = "category!=dropped"
+checkbox = true
+show_ids = true
+progress = true
+group_by_status = true
+link_items = true
+header = "docs/roadmap-intro.md"

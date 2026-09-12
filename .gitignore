@@ -12,3 +12,6 @@ node_modules/
 .vscode/
 .idea/
 *.swp
+
+# cairn keeps its items in the repository on purpose; nothing here is generated
+# except ROADMAP.md, which is committed so the plan is readable on GitHub.
