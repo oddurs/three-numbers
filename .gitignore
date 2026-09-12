@@ -1,10 +1,14 @@
 node_modules/
-build/
-*.pdf
-.DS_Store
-build/pg-*.png
 
-# Editor and OS noise
+# Build output. Anchored to the repository root: a bare `build/` also matches
+# engine/build/, which silently excluded five engine modules from the first
+# commit and broke CI on the first run.
+/build/
+
+# Never commit a rendered draft; releases attach one.
+/*.pdf
+
+.DS_Store
 .vscode/
 .idea/
 *.swp
