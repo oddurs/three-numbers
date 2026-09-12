@@ -1,0 +1,30 @@
+{
+  "name": "three-numbers",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Three Numbers - colour theory for people who would rather see the derivation, and the engine that builds it.",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "node engine/cli.ts build",
+    "check": "node engine/cli.ts check",
+    "figures": "node engine/cli.ts figures",
+    "watch": "node engine/cli.ts watch",
+    "proof": "node engine/cli.ts proof",
+    "stats": "node engine/cli.ts stats",
+    "clean": "node engine/cli.ts clean",
+    "test": "node --test \"engine/test/*.test.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "@types/node": "^24.0.0"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oddurs/three-numbers.git"
+  }
+}

@@ -1,0 +1,10 @@
+node_modules/
+build/
+*.pdf
+.DS_Store
+build/pg-*.png
+
+# Editor and OS noise
+.vscode/
+.idea/
+*.swp

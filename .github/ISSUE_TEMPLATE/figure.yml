@@ -1,0 +1,26 @@
+name: Figure
+description: A figure is wrong, misleading, or could be clearer
+labels: [figure]
+body:
+  - type: input
+    id: id
+    attributes:
+      label: Figure id
+      description: The kebab-case id, e.g. cie-1931-chromaticity
+    validations: { required: true }
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong with it
+      description: Reproduce with `node engine/cli.ts proof --figures` and attach the page if useful.
+    validations: { required: true }
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - The data is wrong
+        - The rendering is wrong
+        - It is legible but misleading
+        - Typography or labelling
+    validations: { required: true }

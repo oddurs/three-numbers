@@ -1,0 +1,22 @@
+* text=auto eol=lf
+
+*.png binary
+*.pdf binary
+*.otf binary
+*.ttf binary
+
+# Vendored datasets are stored byte-for-byte as published. Normalising their
+# line endings would make the committed file differ from the original, which is
+# exactly the kind of silent drift this project exists to avoid.
+data/*        -text
+fonts/*       -text
+
+# Generated: keep it out of diffs and out of language statistics.
+build/**            linguist-generated=true
+data/*.csv          linguist-vendored=true
+data/*.txt          linguist-vendored=true
+fonts/**            linguist-vendored=true
+
+# Typst is the manuscript, not the codebase.
+*.typ               linguist-language=Typst
+*.typ               linguist-documentation=true

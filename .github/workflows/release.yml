@@ -1,0 +1,57 @@
+name: release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      # Full history so the version stamp can describe the tag.
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - uses: typst-community/setup-typst@v4
+        with:
+          typst-version: latest
+
+      - run: npm ci
+
+      # A release that does not pass its own checks is not a release.
+      - name: Check
+        run: node engine/cli.ts check
+
+      - name: Build
+        run: node engine/cli.ts build
+
+      - name: Name the artefact after the tag
+        id: artefact
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          name="three-numbers-${version}.pdf"
+          cp build/three-numbers.pdf "build/${name}"
+          echo "name=${name}" >> "$GITHUB_OUTPUT"
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
+
+      - name: Extract the changelog section for this tag
+        id: notes
+        run: node engine/cli.ts changelog "${GITHUB_REF_NAME}" > build/RELEASE_NOTES.md
+
+      - name: Publish
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "Three Numbers ${{ github.ref_name }}"
+          body_path: build/RELEASE_NOTES.md
+          files: |
+            build/${{ steps.artefact.outputs.name }}
+          draft: false
+          prerelease: ${{ contains(github.ref_name, '-') }}

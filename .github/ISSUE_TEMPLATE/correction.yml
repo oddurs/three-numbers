@@ -1,0 +1,35 @@
+name: Correction
+description: Something in the book is wrong
+labels: [correction]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      placeholder: "Chapter 6, §6.2 — or Figure 5.1"
+    validations: { required: true }
+  - type: textarea
+    id: says
+    attributes:
+      label: What it says
+      description: Quote it, so the fix can be checked against the exact wording.
+    validations: { required: true }
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is wrong
+    validations: { required: true }
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: A DOI, ISBN, standard number or URL, if you have one.
+  - type: checkboxes
+    id: kind
+    attributes:
+      label: This is
+      options:
+        - label: A factual error
+        - label: A number that does not reproduce
+        - label: A citation that does not support the claim
+        - label: A typo or a wording problem
