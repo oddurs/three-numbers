@@ -15,13 +15,14 @@ work rather than remembered.
 
 ## v0.2 — Prove the process
 
-`##########` 100% · 4 of 4 done · due 2026-10-15
+`##########` 100% · 5 of 5 done · due 2026-10-15
 
 One chapter taken end to end, so the pipeline is known to work before it is applied nineteen times.
 
 ### done
 
 - [x] [`0015`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0015-ch-6-the-transfer-function.md) Ch 6 — The Transfer Function <sup>chapter · p0 · ch06 · 7500</sup>
+- [x] [`0037`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0037-the-half-grey-problem.md) The half-grey problem <sup>figure · p0 · ch06</sup>
 - [x] [`0053`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0053-write-the-writing-process.md) Write the writing process <sup>docs · p0</sup>
 - [x] [`0055`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0055-retrospective-on-the-pilot.md) Retrospective on the pilot <sup>docs · p0 · pilot</sup>
 - [x] [`0056`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0056-set-a-sustainable-cadence.md) Set a sustainable cadence <sup>docs · p1</sup>
@@ -46,7 +47,7 @@ Three chapters, 19,900 words. The projection built from the bottom: spectra as v
 
 ## v0.4 — Part II — Spaces
 
-`··········` 0% · 0 of 11 done · due 2027-02-14
+`··········` 0% · 0 of 10 done · due 2027-02-14
 
 Four chapters, 30,700 words. Coordinates on the image: chromaticity, RGB spaces derived from primaries, the transfer function, and the perceptual spaces.
 
@@ -58,7 +59,6 @@ Four chapters, 30,700 words. Coordinates on the image: chromaticity, RGB spaces 
 - [ ] [`0034`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0034-macadam-ellipses.md) MacAdam ellipses <sup>figure · p0 · ch04</sup>
 - [ ] [`0035`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0035-u-v-and-the-partial-repair.md) u'v' and the partial repair <sup>figure · p2 · ch04</sup>
 - [ ] [`0036`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0036-gamut-volumes-measured.md) Gamut volumes, measured <sup>figure · p1 · ch05</sup>
-- [ ] [`0037`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0037-the-half-grey-problem.md) The half-grey problem <sup>figure · p0 · ch06</sup>
 - [ ] [`0038`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0038-pq-and-hlg.md) PQ and HLG <sup>figure · p1 · ch06</sup>
 - [ ] [`0039`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0039-hue-lines-in-cielab-and-oklab.md) Hue lines in CIELAB and Oklab <sup>figure · p0 · ch07</sup>
 - [ ] [`0049`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0049-figure-inventory-for-part-ii.md) Figure inventory for Part II <sup>pass · p1</sup>
