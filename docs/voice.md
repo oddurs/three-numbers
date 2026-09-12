@@ -12,7 +12,7 @@ Measured across the outline prose, and cut:
 
 | Tic | Why |
 |---|---|
-| `honestly`, `genuinely`, `actually`, `precisely` | Reassurance words. A confident book does not keep announcing its own rigour; it just has it. The generator strips these — see `de_reassure` in `outline/gen.py`. |
+| `honestly`, `genuinely`, `actually`, `precisely` | Reassurance words. A confident book does not keep announcing its own rigour; it just has it. The generator strips these — see `deReassure` in `engine/outline/emit.ts`. |
 | Manufactured aphoristic epigraphs | Nineteen of identical shape (confident debunk + metaphor) is a mannerism, not a voice. Use real quotes where the field has them — Newton, Maxwell, Albers — and no epigraph where it does not. |
 | "X and its Lies" | The debunking posture is load-bearing for thirty pages and exhausting for three hundred, and it casts the reader as a dupe being rescued. One such title in the book, not three. |
 | Heavy em-dash use | Was running at 5.6 per thousand words. Aim for half that. |

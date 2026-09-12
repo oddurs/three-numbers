@@ -30,6 +30,7 @@ node engine/cli.ts check
 - renders every figure and verifies each is the width it is placed at
 - refuses a figure placed twice, or a cross-reference to one never placed
 - lints captions for Typst/TypeScript markup collisions
+- validates the outline: numbering, part balance, unknown sources, thin arguments
 - audits citations: dangling keys, unused sources, unsupported claims
 
 ## Kinds of change
@@ -56,6 +57,20 @@ That fetches verified metadata from Crossref, arXiv or the page itself. Then
 fill in **Why it matters** and distil at least one claim, each with a locator
 and a confidence. A source with no claims has been collected, not read, and
 `check` will say so.
+
+### A chapter outline
+
+Chapters live as typed declarations in `outline/chNN.outline.ts`. Edit one and
+run:
+
+```sh
+node engine/cli.ts outline check   # validate
+node engine/cli.ts outline sync    # regenerate book/parts
+```
+
+Every section must state the *argument* it will make, not just a heading, and
+every figure and source it names must exist. See
+[`docs/authoring.md`](docs/authoring.md).
 
 ### Engine work
 

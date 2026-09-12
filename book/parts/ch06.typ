@@ -7,7 +7,7 @@
 
 #lead[
   Between a stored number and an emitted photon sits a nonlinear curve. It exists for
-  two unrelated reasons --- a physical accident of cathode ray tubes and a real
+  two unrelated reasons --- a physical accident of cathode ray tubes and a genuine
   perceptual argument about coding efficiency --- and conflating those two reasons is
   how the folklore got so confused.
 ]
@@ -49,7 +49,7 @@
 
 == High dynamic range
 
-#stub(sources: ("itu-bt2100", "smpte-st2084"), words: 1600)[
+#stub(figures: ("transfer-functions",), sources: ("itu-bt2100", "smpte-st2084"), words: 1600)[
   PQ and HLG. PQ as the first transfer function in this book derived from a perceptual
   model rather than from hardware, absolute versus relative encoding, and why HDR
   forces the question 'how bright is white' to have a real answer.

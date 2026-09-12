@@ -7,13 +7,14 @@ bundler. The only external dependency is Typst.
 book/            the manuscript, in Typst
   lib/           page master, components, figure placement, margin apparatus
   front/ parts/ back/
-outline/         the outline as data, plus the generator that emits book/parts/
+outline/         one typed declaration per chapter, plus parts.ts
 figures/         one .fig.ts per figure, grouped by chapter
 fonts/           ET Book, vendored (MIT)
 data/            measured colorimetric datasets
 research/sources/  one Markdown record per source
 engine/
   color/         the colour library — no dependencies
+  outline/       chapter contract, discovery, validation, emission
   draw/          SVG builder, PNG encoder, scales, plots, fonts, design tokens
   figures/       figure contract, discovery, verification, caption linting
   research/      source store, metadata lookup, bibliography, audit
@@ -47,6 +48,18 @@ re-rendering in-process would serve stale figure modules forever, and editing a
 shared module like the theme would not reload either. `watch` re-renders in a
 child process: a fresh module graph every time, for about a tenth of a second.
 
+## The outline pipeline
+
+`outline/chNN.outline.ts` declares a chapter; `engine/outline/` discovers,
+validates and emits it. `sync` writes `book/parts/*.typ` and `book/main.typ`,
+and skips any chapter whose `status` has moved past `outline` — so the engine
+generates scaffolding and then gets out of the way.
+
+It was Python until the engine grew checks worth having. Moving it into
+TypeScript meant the figure ids and citation keys a chapter plans are validated
+against the real registries, which caught references that had been wrong and
+invisible.
+
 ## Generated artefacts
 
 Nothing in `build/` is edited by hand.
@@ -58,3 +71,5 @@ Nothing in `build/` is edited by hand.
 | `build/research/bibliography.yml` | `research/sources/*.md` |
 | `build/version.typ` | git tag, SHA and date |
 | `build/three-numbers.pdf` | Typst |
+| `book/parts/*.typ`, `book/main.typ` | `outline/*.outline.ts` — for chapters still at `status: "outline"` |
+| `docs/outline.md` | the same declarations |

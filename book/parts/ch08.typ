@@ -23,7 +23,7 @@
 
 == Interpolating code values, and why it is wrong
 
-#stub(sources: ("poynton-video",), words: 1600)[
+#stub(figures: ("interpolation-spaces",), sources: ("poynton-video",), words: 1600)[
   Work through blue-to-yellow in sRGB byte values and show exactly where the light
   goes. Then show the same failure in its other costumes: image resizing, box blur,
   mipmaps, and font antialiasing.
@@ -39,7 +39,7 @@
 
 == Hue paths
 
-#stub(sources: ("css-color-4",), words: 1000)[
+#stub(figures: ("interpolation-spaces",), sources: ("css-color-4",), words: 1000)[
   In a cylindrical space, two colours are joined by two arcs. Shorter, longer,
   increasing, decreasing --- the CSS Color 4 vocabulary --- and the specific artefact
   of accidentally taking the long way round through a hue nobody asked for.
@@ -49,7 +49,7 @@
 
 #stub(sources: ("porter-duff-1984",), words: 1500)[
   Porter-Duff, in linear light, with premultiplied alpha, and the three distinct bugs
-  that come from getting any one of those three wrong. The dark-fringe artefact as a
+  that come from getting any one of those three wrong. The dark- fringe artefact as a
   diagnostic.
 ]
 

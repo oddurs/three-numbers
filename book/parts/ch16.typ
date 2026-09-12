@@ -7,8 +7,8 @@
 
 #lead[
   Real-time and offline rendering are where every idea in this book has to be made
-  cheap. The pipeline has a specific shape --- decode, work in scene-linear, tone-map,
-  encode --- and almost every rendering artefact with a colour flavour comes from
+  cheap. The pipeline has a specific shape --- decode, work in scene-linear, tone-
+  map, encode --- and almost every rendering artefact with a colour flavour comes from
   doing one of those steps in the wrong place.
 ]
 

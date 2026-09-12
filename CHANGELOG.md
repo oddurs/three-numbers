@@ -12,6 +12,18 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Changed
+
+- **The outline is now per-chapter and owned by the engine.** One typed
+  declaration in `outline/chNN.outline.ts` per chapter, replacing two
+  arbitrarily-split Python files. The figure ids and citation keys a section
+  plans are validated against the real registries, `outline check` reports
+  numbering gaps, interrupted parts, starved parts, thin arguments and
+  unverified epigraphs, and a `status` field stops the engine overwriting a
+  chapter once prose is being written into it.
+- `docs/outline.md` is generated from the same declarations, so the
+  documentation cannot describe a different book from the one that builds.
+
 ## [0.1.0] - 2026-09-12
 
 ### Added

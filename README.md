@@ -64,6 +64,7 @@ build/           generated: figures, tables, bibliography, the PDF
 | `cite check` | audit the bibliography |
 | `research evidence` | per-chapter evidence sheets |
 | `tables` | regenerate the derived-matrix appendix |
+| `outline` | `list` · `show <id>` · `sync` · `check` · `docs` |
 | `new figure <name> --chapter ch07` | scaffold a figure |
 | `release <major\|minor\|patch>` | verify, bump, changelog, tag |
 

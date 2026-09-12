@@ -56,7 +56,7 @@
 
 == Profiling a press
 
-#stub(sources: ("icc-v4", "cie-15-colorimetry"), words: 1200)[
+#stub(sources: ("cie-15-colorimetry", "icc-v4"), words: 1200)[
   Measurement, the characterisation target, and the fact that a print pipeline is the
   one place in this book where the only honest answer is to go and measure the device.
 ]

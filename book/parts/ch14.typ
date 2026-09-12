@@ -48,7 +48,7 @@
 
 == The constraint nobody mentions
 
-#stub(sources: ("brettel-1997-computerized",), words: 1200)[
+#stub(figures: ("cvd-simulation",), sources: ("brettel-1997-computerized",), words: 1200)[
   Beyond about four entries, hue alone cannot separate a palette for a dichromat,
   because dichromacy collapses the hue circle to roughly one dimension. Lightness must
   do the work. Derive the number, and note that the book's own figure palette was

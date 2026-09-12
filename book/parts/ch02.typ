@@ -2,7 +2,7 @@
 
 #chapter(
   2,
-  epigraph: [the Rays to speak properly are not coloured. In them there is nothing else than a certain Power and Disposition to stir up a Sensation of this or that Colour. \\#todo[verify wording against the 1730 fourth edition]],
+  epigraph: [the Rays to speak properly are not coloured. In them there is nothing else than a certain Power and Disposition to stir up a Sensation of this or that Colour. #todo[verify this wording against the edition cited]],
   epigraph-source: [Isaac Newton, Opticks, 1704],
 )[Three Numbers]
 
@@ -15,7 +15,7 @@
 
 == Cones as inner products
 
-#stub(sources: ("stockman-2000-spectral", "cvrl-database"), words: 1400)[
+#stub(sources: ("cvrl-database", "stockman-2000-spectral"), words: 1400)[
   The L, M and S fundamentals from Stockman and Sharpe, plotted from the measured
   data. Emphasise the overlap between L and M: they are far more similar than
   intuition suggests, which is why red-green deficiency is common and blue-yellow is
@@ -70,7 +70,7 @@
   ]
   #exercise(kind: "think")[
     Two paints match under D65 and diverge under illuminant A. Using only the
-    definition of the tristimulus integral, explain why no choice of three-number
+    definition of the tristimulus integral, explain why no choice of three- number
     colour space can prevent this.
   ]
 ]

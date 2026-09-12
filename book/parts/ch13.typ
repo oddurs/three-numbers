@@ -56,8 +56,8 @@ Returns to #figref("dither-methods").
 
 #stub(words: 1000)[
   Diffusing error in gamma-encoded values distributes it unevenly in light. Show the
-  difference, which is visible in the midtones and is one of the more satisfying one-
-  line fixes in this book.
+  difference, which is visible in the midtones and is one of the more satisfying
+  one-line fixes in this book.
 ]
 
 #exercises[

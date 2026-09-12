@@ -46,8 +46,8 @@ Returns to #figref("cie-1931-chromaticity").
 
 #stub(sources: ("cie-15-colorimetry",), words: 1000)[
   The 1976 UCS transform as a projective correction. It makes the ellipses rounder and
-  is still not uniform. Useful as a lesson in how far a linear-fractional fix can take
-  you.
+  is still not uniform. Useful as a lesson in how far a linear- fractional fix can
+  take you.
 ]
 
 == Dominant wavelength, purity, and colour temperature

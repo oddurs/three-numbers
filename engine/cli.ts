@@ -42,6 +42,10 @@ import { serializeSource } from "./research/source.ts";
 import { loadFigures } from "./figures/registry.ts";
 import { lintFigures } from "./figures/lint.ts";
 import { verifyFigures } from "./figures/verify.ts";
+import { loadOutline } from "./outline/registry.ts";
+import { syncOutline, renderOutlineDoc } from "./outline/emit.ts";
+import { validateOutline, countOutlineIssues } from "./outline/validate.ts";
+import { chapterWords, chapterSources, chapterFigures } from "./outline/define.ts";
 import { ArgError, intOption, nearest, pageRangeOption, parseArgs } from "./args.ts";
 
 /** Every flag the CLI understands, so a typo is an error rather than a shrug. */
@@ -300,6 +304,7 @@ async function cmdCheck(): Promise<void> {
   log.step("figures");
   const loaded = await loadFigures();
   const figures = loaded.map((f) => f.def);
+  const figureIds = new Set(figures.map((f) => f.id));
 
   // Renders every figure, which checks both that it *can* render and that it
   // renders at the width it is placed at.
@@ -307,7 +312,6 @@ async function cmdCheck(): Promise<void> {
     const line = `figure "${issue.figure}" [${issue.code}] ${issue.message}`;
     if (issue.severity === "error") { log.error(line); ok = false; } else { log.warn(line); }
   }
-  const figureIds = new Set(figures.map((f) => f.id));
   const uses = findFigureUses();
   for (const u of uses) {
     if (!figureIds.has(u.id)) {
@@ -346,6 +350,31 @@ async function cmdCheck(): Promise<void> {
     `${plural(refs.length, "cross-reference")}${orphans.length ? style.grey(`, ${orphans.length} not yet placed`) : ""}`,
   );
   if (orphans.length && flag("all")) for (const o of orphans) log.detail(`unplaced: ${o.id}`);
+
+  log.step("outline");
+  try {
+    const outline = await loadOutline();
+    let sourceKeys = new Set<string>();
+    try { sourceKeys = new Set(loadSources().byKey.keys()); } catch { /* reported below */ }
+    const issues = validateOutline(outline, { figureIds, sourceKeys });
+    const counts = countOutlineIssues(issues);
+    for (const i of issues.filter((x) => x.severity === "error")) {
+      log.error(`${i.where} [${i.code}] ${i.message}`);
+      ok = false;
+    }
+    for (const i of issues.filter((x) => x.severity === "warning")) {
+      log.warn(`${i.where} [${i.code}] ${i.message}`);
+    }
+    const words = outline.chapters.reduce((n, c) => n + chapterWords(c.chapter), 0);
+    log.ok(
+      `${plural(outline.chapters.length, "chapter")} in ${plural(outline.parts.length, "part")}, ` +
+      `${plural(outline.chapters.reduce((n, c) => n + c.chapter.sections.length, 0), "section")}, ` +
+      `${words.toLocaleString()} planned words — ${counts.error} errors, ${counts.warning} warnings`,
+    );
+  } catch (err) {
+    log.error(String((err as Error).message ?? err));
+    ok = false;
+  }
 
   log.step("citations");
   try {
@@ -653,6 +682,119 @@ async function cmdRelease(): Promise<void> {
   log.detail("CI will build the PDF and publish the GitHub release.");
 }
 
+/**
+ * The outline: per-chapter declarations under `outline/`.
+ *
+ *   outline            a table of the whole book
+ *   outline show <id>  one chapter in full
+ *   outline sync       regenerate book/parts and book/main.typ
+ *   outline check      validate without writing anything
+ */
+async function cmdOutline(): Promise<void> {
+  const sub = rest[0] ?? "list";
+  const outline = await loadOutline();
+
+  if (sub === "list") {
+    let part = "";
+    let total = 0;
+    for (const { chapter } of outline.chapters) {
+      if (chapter.part !== part) {
+        part = chapter.part;
+        const p = outline.parts.find((x) => x.number === part)!;
+        log.blank();
+        console.log(`  ${style.grey(`Part ${p.number}`)} ${style.bold(p.title)}`);
+      }
+      const words = chapterWords(chapter);
+      total += words;
+      const mark = chapter.status === "outline"
+        ? style.grey("outline ")
+        : chapter.status === "drafting" ? style.yellow("drafting") : style.green("written ");
+      console.log(
+        `    ${String(chapter.number).padStart(2)}  ${mark} ${chapter.title.slice(0, 46).padEnd(47)}` +
+        `${String(chapter.sections.length).padStart(2)} §  ${words.toLocaleString().padStart(7)} w`,
+      );
+    }
+    log.blank();
+    log.ok(
+      `${plural(outline.chapters.length, "chapter")} in ${plural(outline.parts.length, "part")}, ` +
+      `${plural(outline.chapters.reduce((n, c) => n + c.chapter.sections.length, 0), "section")}, ` +
+      `${total.toLocaleString()} planned words`,
+    );
+    return;
+  }
+
+  if (sub === "show") {
+    const id = rest[1];
+    const found = outline.chapters.find((c) => c.chapter.id === id || String(c.chapter.number) === id);
+    if (!found) { log.error(`no chapter "${id}"`); process.exitCode = 1; return; }
+    const c = found.chapter;
+    log.blank();
+    console.log(`  ${style.bold(`${c.number}. ${c.title}`)}  ${style.grey(`part ${c.part} · ${c.status}`)}`);
+    if (c.epigraph) {
+      log.blank();
+      log.detail(`"${c.epigraph.text.trim().replace(/\s+/g, " ")}"`);
+      if (c.epigraph.source) log.detail(`   — ${c.epigraph.source}${c.epigraph.unverified ? " (UNVERIFIED)" : ""}`);
+    }
+    log.blank();
+    log.detail(c.lead.trim().replace(/\s+/g, " "));
+    log.blank();
+    for (const s of c.sections) {
+      console.log(`    ${String(s.words).padStart(5)} w  ${style.bold(s.title)}`);
+      log.detail(`           ${s.argument.trim().replace(/\s+/g, " ")}`);
+      if (s.figures?.length) log.detail(`           figures: ${s.figures.join(", ")}`);
+      if (s.sources?.length) log.detail(`           sources: ${s.sources.join(", ")}`);
+    }
+    log.blank();
+    log.ok(`${chapterWords(c).toLocaleString()} words · ${chapterFigures(c).length} figures · ${chapterSources(c).length} sources`);
+    return;
+  }
+
+  if (sub === "docs") {
+    const file = join(paths.root, "docs", "outline.md");
+    writeIfChanged(file, renderOutlineDoc(outline));
+    log.ok(`wrote ${relative(paths.root, file)}`);
+    return;
+  }
+
+  if (sub === "sync" || sub === "check") {
+    const figures = (await loadFigures()).map((f) => f.def);
+    const figureIds = new Set(figures.map((f) => f.id));
+    let sourceKeys = new Set<string>();
+    try { sourceKeys = new Set(loadSources().byKey.keys()); } catch { /* reported by cite check */ }
+
+    const issues = validateOutline(outline, { figureIds, sourceKeys });
+    const counts = countOutlineIssues(issues);
+    const mark = { error: style.red("error"), warning: style.yellow("warn "), info: style.grey("info ") };
+    for (const i of flag("all") ? issues : issues.filter((x) => x.severity !== "info")) {
+      console.log(`  ${mark[i.severity]} ${style.grey(i.code.padEnd(22))} ${i.message}`);
+      log.detail(`      ${i.where}`);
+    }
+    if (counts.info && !flag("all")) log.detail(`${plural(counts.info, "note")} hidden; pass --all`);
+
+    if (counts.error > 0) {
+      log.error(`${plural(counts.error, "error")} — nothing written`);
+      process.exitCode = 1;
+      return;
+    }
+
+    if (sub === "check") {
+      log.ok(`outline valid — ${counts.warning} warnings`);
+      return;
+    }
+
+    const result = syncOutline(outline, figureIds);
+    for (const s of result.skipped) log.detail(`left alone: ${s.id} (${s.status})`);
+    log.ok(
+      `outline synced — ${plural(result.written.length, "file")} written, ` +
+      `${result.unchanged.length} unchanged, ${result.skipped.length} hand-written`,
+    );
+    return;
+  }
+
+  log.error(`unknown outline subcommand "${sub}" (list, show, sync, check, docs)`);
+  process.exitCode = 1;
+}
+
 function cmdClean(): void {
   rmSync(paths.build, { recursive: true, force: true });
   log.ok("removed build/");
@@ -680,6 +822,7 @@ function cmdHelp(): void {
     "",
     `  ${style.bold("new")} chapter|figure|source <name>`,
     `  ${style.bold("tables")}                regenerate the derived-matrix appendix`,
+    `  ${style.bold("outline")}               list · show <id> · sync · check · docs`,
     `  ${style.bold("stats")}                 words, figures, sources`,
     `  ${style.bold("version")}               print and stamp the build identity`,
     `  ${style.bold("release")} <major|minor|patch>   verify, bump, changelog, tag`,
@@ -705,6 +848,7 @@ const commands: Record<string, () => void | Promise<void>> = {
   stats: cmdStats,
   tables: () => { writeTables(); log.ok("wrote build/tables/matrices.typ"); },
   version: () => { const v = writeVersion(); log.ok(describe(v)); log.detail(JSON.stringify(v, null, 2)); },
+  outline: cmdOutline,
   changelog: cmdChangelog,
   release: cmdRelease,
   clean: cmdClean,

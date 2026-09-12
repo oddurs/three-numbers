@@ -2,7 +2,7 @@
 
 #chapter(
   3,
-  epigraph: [the science of colour must be regarded as essentially a mental science. \\#todo[verify wording and source]],
+  epigraph: [the science of colour must be regarded as essentially a mental science. #todo[verify this wording against the edition cited]],
   epigraph-source: [James Clerk Maxwell, 1872],
 )[The Standard Observer]
 
@@ -24,8 +24,8 @@
 == From RGB to XYZ: choosing a basis
 
 #stub(sources: ("cie-15-colorimetry",), words: 1700)[
-  The 1931 transformation as a deliberate design: make all three functions non-
-  negative, make one of them exactly V(lambda), put the white point somewhere
+  The 1931 transformation as a deliberate design: make all three functions
+  non-negative, make one of them exactly V(lambda), put the white point somewhere
   convenient. Show the matrix, and stress that a different committee could have chosen
   differently and nothing physical would change.
 ]
@@ -49,7 +49,7 @@
 
 == Which observer?
 
-#stub(sources: ("cvrl-database", "cie-15-colorimetry"), words: 1400)[
+#stub(figures: ("colour-matching-functions",), sources: ("cie-15-colorimetry", "cvrl-database"), words: 1400)[
   1931 2 degrees, 1964 10 degrees, Judd-Vos, CIE 2006. What differs, by how much, and
   when it matters. The uncomfortable fact that the standard everything is built on is
   known to be wrong in the blue and is kept anyway, because compatibility beats

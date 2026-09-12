@@ -2,7 +2,7 @@
 
 #chapter(
   19,
-  epigraph: [In visual perception a color is almost never seen as it really is \u2014 as it physically is. \\#todo[verify wording against the 1963 first edition]],
+  epigraph: [In visual perception a color is almost never seen as it really is \u2014 as it physically is. #todo[verify this wording against the edition cited]],
   epigraph-source: [Josef Albers, Interaction of Color, 1963],
 )[What Three Numbers Cannot Hold]
 
@@ -16,10 +16,10 @@
 == Colour is contextual, and the model is not
 
 #stub(sources: ("fairchild-appearance", "lafer-sousa-2015"), words: 1600)[
-  Simultaneous contrast, the Cornsweet illusion, White's illusion, and the checker-
-  shadow. A tristimulus value is a property of a stimulus; a percept is a property of
-  a scene. Everything in Parts I to IV computes the first and is routinely read as the
-  second.
+  Simultaneous contrast, the Cornsweet illusion, White's illusion, and the
+  checker-shadow. A tristimulus value is a property of a stimulus; a percept is a
+  property of a scene. Everything in Parts I to IV computes the first and is routinely
+  read as the second.
 ]
 
 == Naming, and whether it changes seeing

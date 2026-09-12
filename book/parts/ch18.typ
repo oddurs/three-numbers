@@ -20,9 +20,9 @@
 
 == Where it fails
 
-#stub(sources: ("wcag-2", "apca"), words: 1500)[
+#stub(sources: ("apca", "wcag-2"), words: 1500)[
   Two documented failure modes: it is roughly symmetric under polarity inversion when
-  perception is not, so dark-mode pairs are systematically mis-scored; and it ignores
+  perception is not, so dark-mode pairs are systematically mis- scored; and it ignores
   font size and weight beyond a single coarse threshold. Show pairs that pass and are
   unreadable, and pairs that fail and are fine.
 ]
@@ -30,7 +30,7 @@
 == APCA and the successor problem
 
 #stub(sources: ("apca",), words: 1300)[
-  What a perceptually-grounded replacement looks like, why it is polarity-aware, and
+  What a perceptually-grounded replacement looks like, why it is polarity- aware, and
   the standards-politics reality that a better formula must also be adoptable.
 ]
 

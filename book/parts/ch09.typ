@@ -31,11 +31,11 @@
 
 == CIEDE2000, term by term
 
-#stub(sources: ("sharma-2004-ciede2000",), words: 2000)[
+#stub(figures: ("delta-e-contours",), sources: ("sharma-2004-ciede2000",), words: 2000)[
   Walk the formula and attribute every term to the failure it repairs: the chroma
   rescaling of $a^*$, the three weighting functions, and the notorious rotation term
   that exists solely to fix the blue region. Verify the implementation against
-  Sharma's published conformance set --- all thirty-four pairs --- and say so.
+  Sharma's published conformance set --- all thirty- four pairs --- and say so.
 ]
 
 == What a delta-E means
@@ -48,7 +48,7 @@
 
 == Oklab, ICtCp, and modern metrics
 
-#stub(sources: ("ottosson-oklab", "itu-bt2100"), words: 1300)[
+#stub(figures: ("delta-e-contours",), sources: ("itu-bt2100", "ottosson-oklab"), words: 1300)[
   Euclidean distance in Oklab as a claim that the space is uniform enough not to need
   corrections. Delta-E ITP for HDR, where the old metrics have no defined behaviour
   above 100 nits.

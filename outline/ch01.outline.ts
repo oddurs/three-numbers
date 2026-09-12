@@ -1,0 +1,106 @@
+import { defineChapter } from "../engine/outline/define.ts";
+
+export default defineChapter({
+  id: "ch01",
+  number: 1,
+  part: "I",
+  title: "Light as a Signal",
+  status: "outline",
+  epigraph: {
+    text: `
+      A spectrum is a vector. Everything else in this chapter is that sentence with
+      units attached.
+    `,
+  },
+  lead: `
+    Treat spectral power distributions as what they are --- elements of a function
+    space --- and the operations that matter become familiar. Reflection is
+    pointwise multiplication. Mixing lights is addition. Measurement is an inner
+    product. The only unusual thing is that the space is infinite-dimensional and
+    the measurements number three.
+  `,
+  sections: [
+    {
+      title: "Spectral power distributions",
+      argument: `
+        Define the SPD, its units, and the difference between radiometric and
+        photometric quantities --- the distinction that makes 'brightness' ambiguous
+        and 'luminance' precise. Introduce the repository's \`Spectrum\` type as a
+        uniformly sampled function and be explicit about what sampling costs. Open
+        with the visible band itself, and with the fact that no display has ever
+        shown the reader a single wavelength.
+      `,
+      words: 1500,
+      figures: ["visible-spectrum"],
+      sources: ["cie-15-colorimetry"],
+    },
+    {
+      title: "Black bodies and Planck's law",
+      argument: `
+        Derive the thermal spectrum, in enough detail that the reader sees where the
+        constants come from, and show that colour temperature is a genuine physical
+        parameterisation rather than a marketing term. Wien's law as the peak; the
+        Planckian locus as the trajectory.
+      `,
+      words: 1700,
+      figures: ["blackbody-spectra"],
+    },
+    {
+      title: "Real sources and their spectra",
+      argument: `
+        Daylight, tungsten, fluorescent, LED. The key contrast: thermal sources are
+        smooth, and everything else is spiky. Narrow-band sources are why two paints
+        can match in a shop and not in a car park.
+      `,
+      words: 1300,
+      sources: ["cvrl-database"],
+    },
+    {
+      title: "Reflectance, transmittance, and the surface",
+      argument: `
+        Pointwise multiplication, and why 'the colour of an object' is a category
+        error that we get away with because daylight is smooth and broadly flat.
+      `,
+      words: 1000,
+    },
+    {
+      title: "Standard illuminants",
+      argument: `
+        Why the CIE had to standardise light before it could standardise colour.
+        D65, A, E, and the daylight locus as a cubic fit to measured sky. Note that
+        the engine computes the illuminant A white point from its published SPD and
+        lands within 0.0005 of the published chromaticity --- a small demonstration
+        that the tables are consistent.
+      `,
+      words: 1200,
+      sources: ["cie-15-colorimetry", "cvrl-database"],
+    },
+  ],
+  exercises: [
+    {
+      prompt: `
+        Integrate the published D65 spectrum against the 1931 observer and recover
+        its chromaticity. How far from the published (0.3127, 0.3290) do you land,
+        and is the difference in the data or in your quadrature?
+      `,
+      kind: "code",
+    },
+    {
+      prompt: `
+        Wien's law puts a 2856 K black body's peak at about 1015 nm, well outside
+        the visible band. Explain why illuminant A nonetheless looks yellow rather
+        than dark red.
+      `,
+      kind: "think",
+    },
+    {
+      prompt: `
+        Take two light sources with the same correlated colour temperature — one
+        Planckian, one a three-line LED. Show that CCT is not sufficient to predict
+        how a surface will look under them.
+      `,
+      kind: "code",
+      hint: "You are constructing a pair of illuminant metamers.",
+    },
+  ],
+});

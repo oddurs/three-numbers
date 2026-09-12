@@ -41,9 +41,9 @@ Returns to #figref("oklch-gamut-slice").
 == Rendering intents
 
 #stub(sources: ("icc-v4",), words: 1300)[
-  Perceptual, relative colorimetric, saturation, absolute. What ICC specifies versus
-  what vendors do, and why 'perceptual' is a vendor's opinion rather than a defined
-  transform.
+  Perceptual, relative colorimetric, saturation, absolute. What ICC actually specifies
+  versus what vendors do, and why 'perceptual' is a vendor's opinion rather than a
+  defined transform.
 ]
 
 == Wider gamuts in practice
