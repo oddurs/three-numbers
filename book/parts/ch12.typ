@@ -14,7 +14,7 @@
 
 == Where the levels go
 
-#stub(sources: ("poynton-video",), words: 1400)[
+#stub(sources: ("poynton-video",), words: 1000)[
   Count them. How many distinguishable steps does 8-bit sRGB provide, where are they
   too coarse, and how does the transfer function redistribute them. The answer to 'why
   do gradients band in the shadows' is arithmetic, not mysticism.
@@ -22,7 +22,7 @@
 
 == Mach bands and why the eye finds edges
 
-#stub(words: 1200)[
+#stub(words: 850)[
   Lateral inhibition means the visual system differentiates. A quantiser produces step
   discontinuities. Those two facts multiply, which is why banding is far more visible
   than its amplitude suggests.
@@ -30,14 +30,14 @@
 
 == Bit depth, and where to spend it
 
-#stub(sources: ("itu-bt2100",), words: 1100)[
+#stub(sources: ("itu-bt2100",), words: 750)[
   10-bit, 12-bit, half-float. What HDR requires, and the specific argument for why PQ
   at 10 bits beats sRGB at 10 bits over the same range.
 ]
 
 == Dither as noise shaping
 
-#stub(sources: ("ulichney-1993-void",), words: 1400)[
+#stub(sources: ("ulichney-1993-void",), words: 1000)[
   Reframe: dithering adds noise before quantising in order to decorrelate the error
   from the signal. This is the same trick as in audio, and stating it that way makes
   every later algorithm a question about the *spectrum* of the added noise.

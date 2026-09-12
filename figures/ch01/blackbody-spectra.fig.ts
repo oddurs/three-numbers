@@ -11,7 +11,7 @@ const WIEN_NOTE = "dashed: Wien's law";
 
 export default defineFigure({
   id: "blackbody-spectra",
-  chapter: "ch02",
+  chapter: "ch01",
   title: "Planckian radiators from 1500 K to 10 000 K",
   caption: `Planck's law, plotted over the visible band and normalised to a common peak so the
     shapes can be compared. Everything a heated object does to its colour is in this one equation:

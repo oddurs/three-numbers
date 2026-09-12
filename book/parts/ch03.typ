@@ -14,7 +14,7 @@
 
 == The colour matching experiment
 
-#stub(sources: ("wyszecki-stiles",), words: 1500)[
+#stub(sources: ("wyszecki-stiles",), words: 1050)[
   Wright and Guild's apparatus, the bipartite field, and the moment where the
   experiment fails: some test wavelengths cannot be matched, and the subject must add
   primary light to the *test* side. That is where the negative lobes come from, and it
@@ -23,7 +23,7 @@
 
 == From RGB to XYZ: choosing a basis
 
-#stub(sources: ("cie-15-colorimetry",), words: 1700)[
+#stub(sources: ("cie-15-colorimetry",), words: 1200)[
   The 1931 transformation as a deliberate design: make all three functions
   non-negative, make one of them exactly V(lambda), put the white point somewhere
   convenient. Show the matrix, and stress that a different committee could have chosen
@@ -34,7 +34,7 @@
 
 == Imaginary primaries
 
-#stub(words: 900)[
+#stub(words: 650)[
   The price of non-negativity is that X, Y and Z are not lights. No lamp emits the X
   primary. Readers who find this uncomfortable should be reassured that it is the same
   discomfort as a basis vector outside a convex cone, and no more.
@@ -42,14 +42,14 @@
 
 == Integrating a spectrum into tristimulus values
 
-#stub(sources: ("cie-15-colorimetry",), words: 1200)[
+#stub(sources: ("cie-15-colorimetry",), words: 850)[
   The practical recipe, the k normalisation for reflecting surfaces, and the numerical
   care that sampling at 5 nm versus 1 nm requires for spiky sources.
 ]
 
 == Which observer?
 
-#stub(figures: ("colour-matching-functions",), sources: ("cie-15-colorimetry", "cvrl-database"), words: 1400)[
+#stub(figures: ("colour-matching-functions",), sources: ("cie-15-colorimetry", "cvrl-database"), words: 1000)[
   1931 2 degrees, 1964 10 degrees, Judd-Vos, CIE 2006. What differs, by how much, and
   when it matters. The uncomfortable fact that the standard everything is built on is
   known to be wrong in the blue and is kept anyway, because compatibility beats

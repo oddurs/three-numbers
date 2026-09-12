@@ -30,7 +30,7 @@ export default defineChapter({
         is a property of a scene. Everything in Parts I to IV computes the first and
         is routinely read as the second.
       `,
-      words: 1600,
+      words: 1100,
       sources: ["fairchild-appearance", "lafer-sousa-2015"],
     },
     {
@@ -41,7 +41,7 @@ export default defineChapter({
         --- which is a reliable but small effect on discrimination speed, not a
         different visual world.
       `,
-      words: 1700,
+      words: 1200,
     },
     {
       title: "Colour as meaning",
@@ -50,7 +50,7 @@ export default defineChapter({
         languages and that Homer's sea was wine-dark. None of this is in the three
         numbers, and all of it governs what a colour does when you ship it.
       `,
-      words: 1400,
+      words: 1000,
     },
     {
       title: "What a better model would need",
@@ -60,7 +60,7 @@ export default defineChapter({
         variation. Point at where each is being worked on, and at how far away it
         is.
       `,
-      words: 1300,
+      words: 900,
       sources: ["fairchild-appearance"],
     },
     {
@@ -71,7 +71,7 @@ export default defineChapter({
         A lossy model that is this useful is not a failure of ambition; it is what a
         successful abstraction looks like.
       `,
-      words: 1200,
+      words: 850,
     },
   ],
 });

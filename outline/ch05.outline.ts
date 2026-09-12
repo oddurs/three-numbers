@@ -25,7 +25,7 @@ export default defineChapter({
         factors that put (1,1,1) on white. Solve, and you have the matrix. Derive
         it, print it, compare to the published table.
       `,
-      words: 1500,
+      words: 1050,
       sources: ["css-color-4"],
     },
     {
@@ -36,7 +36,7 @@ export default defineChapter({
         and the other quotes it rounded to XYZ. Neither is wrong; the disagreement
         is the interesting object, and the engine reproduces both on demand.
       `,
-      words: 1100,
+      words: 750,
       sources: ["css-color-4"],
     },
     {
@@ -46,7 +46,7 @@ export default defineChapter({
         Change the primaries and the weights change. Every codebase that hard-codes
         these and then switches to P3 has a bug.
       `,
-      words: 900,
+      words: 650,
       sources: ["poynton-video"],
     },
     {
@@ -57,19 +57,19 @@ export default defineChapter({
         ACES AP0's deliberate enclosure of the entire locus as two solutions to the
         same problem.
       `,
-      words: 1700,
+      words: 1200,
       figures: ["cie-1931-chromaticity"],
       sources: ["css-color-4"],
     },
     {
-      title: "Gamut volume, measured honestly",
+      title: "Measuring gamut volume",
       argument: `
         Replace the area-on-a-chromaticity-diagram habit with a Monte Carlo volume
         in Oklab, and give the numbers. Note how much smaller the difference between
         sRGB and P3 is than the marketing suggests, and how much of Rec.2020 no
         display can reach.
       `,
-      words: 1300,
+      words: 900,
       figures: ["oklch-gamut-slice"],
     },
   ],

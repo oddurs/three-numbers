@@ -30,7 +30,7 @@ export default defineChapter({
         with the visible band itself, and with the fact that no display has ever
         shown the reader a single wavelength.
       `,
-      words: 1500,
+      words: 1050,
       figures: ["visible-spectrum"],
       sources: ["cie-15-colorimetry"],
     },
@@ -42,7 +42,7 @@ export default defineChapter({
         parameterisation rather than a marketing term. Wien's law as the peak; the
         Planckian locus as the trajectory.
       `,
-      words: 1700,
+      words: 1200,
       figures: ["blackbody-spectra"],
     },
     {
@@ -52,7 +52,7 @@ export default defineChapter({
         smooth, and everything else is spiky. Narrow-band sources are why two paints
         can match in a shop and not in a car park.
       `,
-      words: 1300,
+      words: 900,
       sources: ["cvrl-database"],
     },
     {
@@ -61,7 +61,7 @@ export default defineChapter({
         Pointwise multiplication, and why 'the colour of an object' is a category
         error that we get away with because daylight is smooth and broadly flat.
       `,
-      words: 1000,
+      words: 700,
     },
     {
       title: "Standard illuminants",
@@ -72,7 +72,7 @@ export default defineChapter({
         lands within 0.0005 of the published chromaticity --- a small demonstration
         that the tables are consistent.
       `,
-      words: 1200,
+      words: 850,
       sources: ["cie-15-colorimetry", "cvrl-database"],
     },
   ],

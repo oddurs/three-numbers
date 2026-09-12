@@ -42,11 +42,16 @@ template = """
 
 ## Drafting
 
-- [ ] Prose written to the word budget, ±20%
+- [ ] Prose written to the word budget, ±35% — and if it is outside that,
+      decide whether the section grew or the budget was wrong before adding
+      words. A section that discharges its argument is finished.
 - [ ] `status: "drafting"` set in `outline/chNN.outline.ts` *before* writing
       into `book/parts/`, or the next `outline sync` overwrites it
 - [ ] Every figure placed once, cross-referenced after
 - [ ] Exercises: three to five, at least one of each kind
+- [ ] Margin apparatus: roughly one sidenote, margin note or margin figure per
+      two pages. The 56 mm column is half the reason for this page design, and
+      an empty one is a wasted argument
 
 ## Revising
 
@@ -54,7 +59,7 @@ template = """
 - [ ] Em-dashes under ~3 per 1,000 words
 - [ ] No paragraph asserts something a reader could not check
 - [ ] Read aloud once, start to finish
-- [ ] `node engine/cli.ts check` green
+- [ ] `node engine/cli.ts check --all` green, including the voice warnings
 - [ ] `status: "written"` set in the outline declaration
 
 ## Notes

@@ -30,7 +30,7 @@ export default defineChapter({
         similar than intuition suggests, which is why red-green deficiency is common
         and blue-yellow is rare.
       `,
-      words: 1400,
+      words: 1000,
       sources: ["cvrl-database", "stockman-2000-spectral"],
     },
     {
@@ -41,7 +41,7 @@ export default defineChapter({
         and note where it breaks down --- very low light, very high saturation, very
         small fields.
       `,
-      words: 1200,
+      words: 850,
     },
     {
       title: "Metamerism, constructed",
@@ -52,7 +52,7 @@ export default defineChapter({
         share nothing. Distinguish illuminant metamerism, observer metamerism, and
         geometric metamerism, and note which one ruins car paint.
       `,
-      words: 1800,
+      words: 1250,
       figures: ["metamer-pair"],
       sources: ["cie-15-colorimetry"],
     },
@@ -64,7 +64,7 @@ export default defineChapter({
         decomposition. This is the cleanest statement of what colour vision
         discards.
       `,
-      words: 1300,
+      words: 900,
       sources: ["wyszecki-stiles"],
     },
     {
@@ -74,7 +74,7 @@ export default defineChapter({
         assumes photopic conditions throughout and that mesopic vision is a
         genuinely unsolved practical problem.
       `,
-      words: 800,
+      words: 550,
     },
   ],
   exercises: [

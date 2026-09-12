@@ -25,6 +25,8 @@ export interface ValidateContext {
   readonly figureIds: ReadonlySet<string>;
   /** Citation keys that exist in the research store. */
   readonly sourceKeys: ReadonlySet<string>;
+  /** Each figure's declared chapter, for detecting drift after a renumbering. */
+  readonly figureChapters?: ReadonlyMap<string, string>;
 }
 
 /** A section this long is a chapter wearing a heading. */
@@ -52,13 +54,35 @@ export function validateOutline(outline: Outline, ctx: ValidateContext): Outline
     validateChapter(chapter, file, ctx, add);
   }
 
+  // A figure declares which chapter it belongs to, and a section declares which
+  // figures it needs. Those two can disagree, and after the chapters were
+  // renumbered eleven of thirteen did — silently, because a figure's `chapter`
+  // field and its directory agreed with each other and nothing compared either
+  // against the outline.
+  const plannedBy = new Map<string, string>();
+  for (const { chapter } of outline.chapters) {
+    for (const section of chapter.sections) {
+      for (const id of section.figures ?? []) {
+        if (!plannedBy.has(id)) plannedBy.set(id, chapter.id);
+      }
+    }
+  }
+  for (const [id, declared] of ctx.figureChapters ?? []) {
+    const planned = plannedBy.get(id);
+    if (planned && planned !== declared) {
+      add(
+        "error",
+        `figure ${id}`,
+        "figure-chapter-drift",
+        `declares chapter "${declared}" but is planned by ${planned} — move it to figures/${planned}/ and update the field`,
+      );
+    }
+  }
+
   // Figures that exist but no chapter plans. Not an error — a figure may be
   // drawn before its chapter is outlined — but worth knowing about.
-  const planned = new Set(
-    outline.chapters.flatMap((c) => c.chapter.sections.flatMap((s) => s.figures ?? [])),
-  );
   for (const id of ctx.figureIds) {
-    if (!planned.has(id)) {
+    if (!plannedBy.has(id)) {
       add("info", "outline", "unplanned-figure", `figure "${id}" is not planned by any section`);
     }
   }

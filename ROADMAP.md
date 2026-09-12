@@ -15,28 +15,28 @@ work rather than remembered.
 
 ## v0.2 — Prove the process
 
-`··········` 0% · 0 of 4 done · due 2026-10-15
+`##########` 100% · 4 of 4 done · due 2026-10-15
 
 One chapter taken end to end, so the pipeline is known to work before it is applied nineteen times.
 
-### backlog
+### done
 
-- [ ] [`0015`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0015-ch-6-the-transfer-function.md) Ch 6 — The Transfer Function <sup>chapter · p0 · ch06 · 7500</sup>
-- [ ] [`0053`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0053-write-the-writing-process.md) Write the writing process <sup>docs · p0</sup>
-- [ ] [`0055`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0055-retrospective-on-the-pilot.md) Retrospective on the pilot <sup>docs · p0 · pilot</sup>
-- [ ] [`0056`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0056-set-a-sustainable-cadence.md) Set a sustainable cadence <sup>docs · p1</sup>
+- [x] [`0015`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0015-ch-6-the-transfer-function.md) Ch 6 — The Transfer Function <sup>chapter · p0 · ch06 · 7500</sup>
+- [x] [`0053`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0053-write-the-writing-process.md) Write the writing process <sup>docs · p0</sup>
+- [x] [`0055`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0055-retrospective-on-the-pilot.md) Retrospective on the pilot <sup>docs · p0 · pilot</sup>
+- [x] [`0056`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0056-set-a-sustainable-cadence.md) Set a sustainable cadence <sup>docs · p1</sup>
 
 ## v0.3 — Part I — Light
 
-`··········` 0% · 0 of 9 done · due 2026-12-15
+`··········` 0% · 0 of 9 done · due 2026-12-03
 
 Three chapters, 19,900 words. The projection built from the bottom: spectra as vectors, cones as inner products, and the standard observer as a chosen basis.
 
 ### backlog
 
-- [ ] [`0010`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0010-ch-1-light-as-a-signal.md) Ch 1 — Light as a Signal <sup>chapter · p1 · ch01 · 6700</sup>
-- [ ] [`0011`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0011-ch-2-three-numbers.md) Ch 2 — Three Numbers <sup>chapter · p1 · ch02 · 6500</sup>
-- [ ] [`0012`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0012-ch-3-the-standard-observer.md) Ch 3 — The Standard Observer <sup>chapter · p1 · ch03 · 6700</sup>
+- [ ] [`0010`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0010-ch-1-light-as-a-signal.md) Ch 1 — Light as a Signal <sup>chapter · p1 · ch01 · 4700</sup>
+- [ ] [`0011`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0011-ch-2-three-numbers.md) Ch 2 — Three Numbers <sup>chapter · p1 · ch02 · 4550</sup>
+- [ ] [`0012`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0012-ch-3-the-standard-observer.md) Ch 3 — The Standard Observer <sup>chapter · p1 · ch03 · 4750</sup>
 - [ ] [`0029`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0029-real-source-spectra-side-by-side.md) Real source spectra, side by side <sup>figure · p1 · ch01</sup>
 - [ ] [`0030`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0030-reflectance-as-pointwise-multiplication.md) Reflectance as pointwise multiplication <sup>figure · p2 · ch01</sup>
 - [ ] [`0031`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0031-the-cone-fundamentals.md) The cone fundamentals <sup>figure · p0 · ch02</sup>
@@ -46,15 +46,15 @@ Three chapters, 19,900 words. The projection built from the bottom: spectra as v
 
 ## v0.4 — Part II — Spaces
 
-`··········` 0% · 0 of 11 done · due 2027-03-15
+`··········` 0% · 0 of 11 done · due 2027-02-14
 
 Four chapters, 30,700 words. Coordinates on the image: chromaticity, RGB spaces derived from primaries, the transfer function, and the perceptual spaces.
 
 ### backlog
 
-- [ ] [`0013`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0013-ch-4-chromaticity-and-its-shadows.md) Ch 4 — Chromaticity and Its Shadows <sup>chapter · p1 · ch04 · 6500</sup>
-- [ ] [`0014`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0014-ch-5-building-an-rgb-space.md) Ch 5 — Building an RGB Space <sup>chapter · p1 · ch05 · 6500</sup>
-- [ ] [`0016`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0016-ch-7-perceptual-spaces-and-the-cylinders-on-top-of-them.md) Ch 7 — Perceptual Spaces, and the Cylinders on Top of Them <sup>chapter · p1 · ch07 · 10200</sup>
+- [ ] [`0013`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0013-ch-4-chromaticity-and-its-shadows.md) Ch 4 — Chromaticity and Its Shadows <sup>chapter · p1 · ch04 · 4550</sup>
+- [ ] [`0014`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0014-ch-5-building-an-rgb-space.md) Ch 5 — Building an RGB Space <sup>chapter · p1 · ch05 · 4550</sup>
+- [ ] [`0016`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0016-ch-7-perceptual-spaces-and-the-cylinders-on-top-of-them.md) Ch 7 — Perceptual Spaces, and the Cylinders on Top of Them <sup>chapter · p1 · ch07 · 7100</sup>
 - [ ] [`0034`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0034-macadam-ellipses.md) MacAdam ellipses <sup>figure · p0 · ch04</sup>
 - [ ] [`0035`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0035-u-v-and-the-partial-repair.md) u'v' and the partial repair <sup>figure · p2 · ch04</sup>
 - [ ] [`0036`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0036-gamut-volumes-measured.md) Gamut volumes, measured <sup>figure · p1 · ch05</sup>
@@ -66,33 +66,33 @@ Four chapters, 30,700 words. Coordinates on the image: chromaticity, RGB spaces 
 
 ## v0.5 — Part III — Operations
 
-`··········` 0% · 0 of 7 done · due 2027-06-01
+`··········` 0% · 0 of 7 done · due 2027-04-21
 
 Four chapters, 27,000 words. Arithmetic in those coordinates: mixing, distance, gamut mapping, adaptation.
 
 ### backlog
 
-- [ ] [`0017`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0017-ch-8-mixing-light.md) Ch 8 — Mixing Light <sup>chapter · p1 · ch08 · 7400</sup>
-- [ ] [`0018`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0018-ch-9-distance.md) Ch 9 — Distance <sup>chapter · p1 · ch09 · 7100</sup>
-- [ ] [`0019`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0019-ch-10-gamuts-clipping-and-mapping.md) Ch 10 — Gamuts, Clipping and Mapping <sup>chapter · p1 · ch10 · 6400</sup>
-- [ ] [`0020`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0020-ch-11-adaptation-and-white.md) Ch 11 — Adaptation and White <sup>chapter · p1 · ch11 · 6100</sup>
+- [ ] [`0017`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0017-ch-8-mixing-light.md) Ch 8 — Mixing Light <sup>chapter · p1 · ch08 · 5150</sup>
+- [ ] [`0018`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0018-ch-9-distance.md) Ch 9 — Distance <sup>chapter · p1 · ch09 · 5000</sup>
+- [ ] [`0019`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0019-ch-10-gamuts-clipping-and-mapping.md) Ch 10 — Gamuts, Clipping and Mapping <sup>chapter · p1 · ch10 · 4450</sup>
+- [ ] [`0020`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0020-ch-11-adaptation-and-white.md) Ch 11 — Adaptation and White <sup>chapter · p1 · ch11 · 4300</sup>
 - [ ] [`0040`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0040-the-alpha-fringe.md) The alpha fringe <sup>figure · p1 · ch08</sup>
 - [ ] [`0041`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0041-what-clipping-costs.md) What clipping costs <sup>figure · p0 · ch10</sup>
 - [ ] [`0050`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0050-figure-inventory-for-part-iii.md) Figure inventory for Part III <sup>pass · p1</sup>
 
 ## v0.6 — Part IV — Pixels
 
-`··········` 0% · 0 of 10 done · due 2027-09-01
+`··········` 0% · 0 of 10 done · due 2027-07-11
 
 Five chapters, 32,900 words. The continuous model meets a discrete machine: quantisation, dithering, palettes, ink, and the rendering pipeline.
 
 ### backlog
 
-- [ ] [`0021`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0021-ch-12-quantisation-and-banding.md) Ch 12 — Quantisation and Banding <sup>chapter · p1 · ch12 · 5100</sup>
-- [ ] [`0022`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0022-ch-13-dithering.md) Ch 13 — Dithering <sup>chapter · p1 · ch13 · 6500</sup>
-- [ ] [`0023`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0023-ch-14-palettes.md) Ch 14 — Palettes <sup>chapter · p1 · ch14 · 6800</sup>
-- [ ] [`0024`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0024-ch-15-ink.md) Ch 15 — Ink <sup>chapter · p1 · ch15 · 7800</sup>
-- [ ] [`0025`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0025-ch-16-colour-in-the-rendering-pipeline.md) Ch 16 — Colour in the Rendering Pipeline <sup>chapter · p1 · ch16 · 6700</sup>
+- [ ] [`0021`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0021-ch-12-quantisation-and-banding.md) Ch 12 — Quantisation and Banding <sup>chapter · p1 · ch12 · 3600</sup>
+- [ ] [`0022`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0022-ch-13-dithering.md) Ch 13 — Dithering <sup>chapter · p1 · ch13 · 4550</sup>
+- [ ] [`0023`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0023-ch-14-palettes.md) Ch 14 — Palettes <sup>chapter · p1 · ch14 · 4750</sup>
+- [ ] [`0024`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0024-ch-15-ink.md) Ch 15 — Ink <sup>chapter · p1 · ch15 · 5500</sup>
+- [ ] [`0025`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0025-ch-16-colour-in-the-rendering-pipeline.md) Ch 16 — Colour in the Rendering Pipeline <sup>chapter · p1 · ch16 · 4700</sup>
 - [ ] [`0042`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0042-where-the-levels-go.md) Where the levels go <sup>figure · p1 · ch12</sup>
 - [ ] [`0043`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0043-why-blue-noise-is-blue.md) Why blue noise is blue <sup>figure · p0 · ch13</sup>
 - [ ] [`0044`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0044-subtractive-mixing-is-multiplication.md) Subtractive mixing is multiplication <sup>figure · p0 · ch15</sup>
@@ -101,15 +101,15 @@ Five chapters, 32,900 words. The continuous model meets a discrete machine: quan
 
 ## v0.7 — Part V — People
 
-`··········` 0% · 0 of 8 done · due 2027-11-01
+`··········` 0% · 0 of 8 done · due 2027-08-29
 
 Three chapters, 20,100 words. The standard observer does not exist. Colour vision deficiency, contrast standards, and the limits of the model.
 
 ### backlog
 
-- [ ] [`0026`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0026-ch-17-colour-vision-deficiency.md) Ch 17 — Colour Vision Deficiency <sup>chapter · p1 · ch17 · 6800</sup>
-- [ ] [`0027`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0027-ch-18-contrast-legibility-and-the-standards.md) Ch 18 — Contrast, Legibility and the Standards <sup>chapter · p1 · ch18 · 6100</sup>
-- [ ] [`0028`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0028-ch-19-what-three-numbers-cannot-hold.md) Ch 19 — What Three Numbers Cannot Hold <sup>chapter · p1 · ch19 · 7200</sup>
+- [ ] [`0026`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0026-ch-17-colour-vision-deficiency.md) Ch 17 — Colour Vision Deficiency <sup>chapter · p1 · ch17 · 4750</sup>
+- [ ] [`0027`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0027-ch-18-contrast-legibility-and-the-standards.md) Ch 18 — Contrast, Legibility and the Standards <sup>chapter · p1 · ch18 · 4250</sup>
+- [ ] [`0028`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0028-ch-19-what-three-numbers-cannot-hold.md) Ch 19 — What Three Numbers Cannot Hold <sup>chapter · p1 · ch19 · 5050</sup>
 - [ ] [`0045`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0045-confusion-lines.md) Confusion lines <sup>figure · p0 · ch17</sup>
 - [ ] [`0046`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0046-wcag-2-against-apca.md) WCAG 2 against APCA <sup>figure · p0 · ch18</sup>
 - [ ] [`0047`](https://github.com/oddurs/three-numbers/blob/main/cairn/items/0047-simultaneous-contrast.md) Simultaneous contrast <sup>figure · p1 · ch19</sup>
@@ -118,7 +118,7 @@ Three chapters, 20,100 words. The standard observer does not exist. Colour visio
 
 ## v0.8 — Apparatus
 
-`··········` 0% · 0 of 5 done · due 2027-12-15
+`··········` 0% · 0 of 5 done · due 2027-10-10
 
 Everything that is not a chapter: front matter, the four appendices, exercises across the book, the index, and the bibliography in its final state.
 
@@ -132,7 +132,7 @@ Everything that is not a chapter: front matter, the four appendices, exercises a
 
 ## v0.9 — Editorial passes
 
-`··········` 0% · 0 of 6 done · due 2028-03-01
+`··········` 0% · 0 of 6 done · due 2027-12-19
 
 Sweeps over the whole book rather than work on any one chapter: structural, technical, line, accessibility and print.
 

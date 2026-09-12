@@ -27,7 +27,7 @@ export default defineChapter({
         them. The answer to 'why do gradients band in the shadows' is arithmetic,
         not mysticism.
       `,
-      words: 1400,
+      words: 1000,
       sources: ["poynton-video"],
     },
     {
@@ -37,7 +37,7 @@ export default defineChapter({
         produces step discontinuities. Those two facts multiply, which is why
         banding is far more visible than its amplitude suggests.
       `,
-      words: 1200,
+      words: 850,
     },
     {
       title: "Bit depth, and where to spend it",
@@ -45,7 +45,7 @@ export default defineChapter({
         10-bit, 12-bit, half-float. What HDR requires, and the specific argument for
         why PQ at 10 bits beats sRGB at 10 bits over the same range.
       `,
-      words: 1100,
+      words: 750,
       sources: ["itu-bt2100"],
     },
     {
@@ -56,7 +56,7 @@ export default defineChapter({
         that way makes every later algorithm a question about the *spectrum* of the
         added noise.
       `,
-      words: 1400,
+      words: 1000,
       figures: ["dither-methods"],
       sources: ["ulichney-1993-void"],
     },

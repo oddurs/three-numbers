@@ -41,7 +41,7 @@ function contour(
 
 export default defineFigure({
   id: "delta-e-contours",
-  chapter: "ch11",
+  chapter: "ch09",
   title: "Contours of equal colour difference",
   caption: `Each closed curve encloses the colours within ΔE = 2 of the dot at its centre, in the
     $a^*b^*$ plane at $L^* = 50$, drawn three times actual size so that the small ones are visible at all.

@@ -10,7 +10,7 @@ const GAMUT_NOTE = "desaturated = outside sRGB";
 
 export default defineFigure({
   id: "cie-1931-chromaticity",
-  chapter: "ch05",
+  chapter: "ch04",
   title: "The CIE 1931 chromaticity diagram",
   caption: `Every colour a human eye can be shown, projected onto two dimensions. The curved
     boundary is the spectrum locus: the chromaticity of each pure wavelength, in nanometres. The

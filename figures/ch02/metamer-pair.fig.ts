@@ -46,7 +46,7 @@ function matchWithLines(target: Vec3, centres: [number, number, number]): Spectr
 
 export default defineFigure({
   id: "metamer-pair",
-  chapter: "ch03",
+  chapter: "ch02",
   title: "Two spectra, one colour",
   caption: `A broad, smooth reflectance and a spike of three narrow emission lines. They have
     nothing in common as functions of wavelength, and they produce *identical* tristimulus values:

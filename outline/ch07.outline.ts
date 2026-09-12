@@ -27,7 +27,7 @@ export default defineChapter({
         --- and note immediately that this is a strong claim about a metric space
         and that no such space exists exactly.
       `,
-      words: 900,
+      words: 650,
       sources: ["fairchild-appearance"],
     },
     {
@@ -37,7 +37,7 @@ export default defineChapter({
         and why it is there, the opponent axes, and the relationship between L* and
         luminance. Derive why L* = 50 is not half the light.
       `,
-      words: 1600,
+      words: 1100,
       sources: ["cie-15-colorimetry"],
     },
     {
@@ -46,7 +46,7 @@ export default defineChapter({
         The alternative that kept a projective chromaticity diagram, why the
         television industry preferred it, and why it lost.
       `,
-      words: 700,
+      words: 500,
       sources: ["cie-15-colorimetry"],
     },
     {
@@ -59,7 +59,7 @@ export default defineChapter({
         neutral axis misses sRGB's by about two parts in ten thousand, which is what
         being a fit costs.
       `,
-      words: 1600,
+      words: 1100,
       sources: ["ottosson-oklab"],
     },
     {
@@ -71,7 +71,7 @@ export default defineChapter({
         fair hearing --- they are cheap, they are in every picker, and for nudging
         one hue they are adequate.
       `,
-      words: 1300,
+      words: 900,
     },
     {
       title: "Measuring the damage",
@@ -80,7 +80,7 @@ export default defineChapter({
         say. HSL reports a flat line; CIE L* swings by sixty units. Quantify it, and
         show what it does to a real interface.
       `,
-      words: 1500,
+      words: 1050,
       figures: ["lightness-comparison"],
       sources: ["ottosson-oklab"],
     },
@@ -93,7 +93,7 @@ export default defineChapter({
         slider cannot have a fixed range. That is a real cost and the chapter should
         not pretend otherwise.
       `,
-      words: 1500,
+      words: 1050,
       figures: ["oklch-gamut-slice"],
       sources: ["css-color-4", "ottosson-oklab"],
     },
@@ -105,7 +105,7 @@ export default defineChapter({
         above know any of that. Sketch the architecture, state what it buys, and be
         clear that most software will never use it.
       `,
-      words: 1100,
+      words: 750,
       sources: ["fairchild-appearance"],
     },
   ],

@@ -28,7 +28,7 @@ export default defineChapter({
         must add primary light to the *test* side. That is where the negative lobes
         come from, and it is a fact about the primaries, not about the eye.
       `,
-      words: 1500,
+      words: 1050,
       sources: ["wyszecki-stiles"],
     },
     {
@@ -39,7 +39,7 @@ export default defineChapter({
         somewhere convenient. Show the matrix, and stress that a different committee
         could have chosen differently and nothing physical would change.
       `,
-      words: 1700,
+      words: 1200,
       figures: ["colour-matching-functions"],
       sources: ["cie-15-colorimetry"],
     },
@@ -51,7 +51,7 @@ export default defineChapter({
         it is the same discomfort as a basis vector outside a convex cone, and no
         more.
       `,
-      words: 900,
+      words: 650,
     },
     {
       title: "Integrating a spectrum into tristimulus values",
@@ -60,7 +60,7 @@ export default defineChapter({
         numerical care that sampling at 5 nm versus 1 nm actually requires for spiky
         sources.
       `,
-      words: 1200,
+      words: 850,
       sources: ["cie-15-colorimetry"],
     },
     {
@@ -71,7 +71,7 @@ export default defineChapter({
         everything is built on is known to be wrong in the blue and is kept anyway,
         because compatibility beats accuracy.
       `,
-      words: 1400,
+      words: 1000,
       figures: ["colour-matching-functions"],
       sources: ["cie-15-colorimetry", "cvrl-database"],
     },

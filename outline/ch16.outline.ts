@@ -26,7 +26,7 @@ export default defineChapter({
         specific bug of filtering an sRGB texture without the sRGB flag: the GPU
         interpolates code values and the result is dark.
       `,
-      words: 1400,
+      words: 1000,
       sources: ["poynton-video"],
     },
     {
@@ -36,7 +36,7 @@ export default defineChapter({
         sources, and the fact that a renderer's intermediate values are radiance,
         not colour.
       `,
-      words: 1200,
+      words: 850,
       sources: ["aces-system"],
     },
     {
@@ -46,7 +46,7 @@ export default defineChapter({
         display. Reinhard, filmic curves, and the ACES output transform as three
         points on a spectrum from arbitrary to principled. What each does to hue.
       `,
-      words: 1700,
+      words: 1200,
       sources: ["aces-system"],
     },
     {
@@ -56,7 +56,7 @@ export default defineChapter({
         and grading in a perceptual space, and the cost of an Oklab conversion in a
         fragment shader --- with the actual instruction count.
       `,
-      words: 1300,
+      words: 900,
     },
     {
       title: "The output chain",
@@ -64,7 +64,7 @@ export default defineChapter({
         Swapchain formats, display profiles, HDR metadata, and the depressing gap
         between what an application asks for and what the compositor does.
       `,
-      words: 1100,
+      words: 750,
       sources: ["itu-bt2100"],
     },
   ],

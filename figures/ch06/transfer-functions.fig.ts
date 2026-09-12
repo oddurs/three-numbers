@@ -8,7 +8,7 @@ const curve = (f: (v: number) => number, n = 240): Array<readonly [number, numbe
 
 export default defineFigure({
   id: "transfer-functions",
-  chapter: "ch07",
+  chapter: "ch06",
   title: "Transfer functions, and the gap between sRGB and gamma 2.2",
   caption: `Left: encoded value against linear light, for four curves that are routinely treated as
     interchangeable. At this scale they are indistinguishable, which is exactly why the confusion

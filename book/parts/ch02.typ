@@ -15,7 +15,7 @@
 
 == Cones as inner products
 
-#stub(sources: ("cvrl-database", "stockman-2000-spectral"), words: 1400)[
+#stub(sources: ("cvrl-database", "stockman-2000-spectral"), words: 1000)[
   The L, M and S fundamentals from Stockman and Sharpe, plotted from the measured
   data. Emphasise the overlap between L and M: they are far more similar than
   intuition suggests, which is why red-green deficiency is common and blue-yellow is
@@ -24,7 +24,7 @@
 
 == Grassmann's laws and why colour is linear
 
-#stub(words: 1200)[
+#stub(words: 850)[
   State the laws as the empirical claim that colour matching is a linear map, note
   that this is a *contingent experimental fact* rather than a necessity, and note
   where it breaks down --- very low light, very high saturation, very small fields.
@@ -32,7 +32,7 @@
 
 == Metamerism, constructed
 
-#stub(sources: ("cie-15-colorimetry",), words: 1800)[
+#stub(sources: ("cie-15-colorimetry",), words: 1250)[
   Build a metamer explicitly by solving a 3x3 system rather than by searching: pick
   three emission lines, solve for the weights that reproduce a target's tristimulus
   values, and observe that the answer is exact and the spectra share nothing.
@@ -44,7 +44,7 @@
 
 == The null space, and what lives in it
 
-#stub(sources: ("wyszecki-stiles",), words: 1300)[
+#stub(sources: ("wyszecki-stiles",), words: 900)[
   Formalise: the set of spectra invisible to the eye is a closed subspace of enormous
   dimension. Fundamental metamers and the black-metamer decomposition. This is the
   cleanest statement of what colour vision discards.
@@ -52,7 +52,7 @@
 
 == Rods, and the part of the model we are ignoring
 
-#stub(words: 800)[
+#stub(words: 550)[
   Scotopic vision, the Purkinje shift, and an honest statement that this book assumes
   photopic conditions throughout and that mesopic vision is a unsolved practical
   problem.

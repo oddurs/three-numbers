@@ -23,6 +23,10 @@
 #fig("cie-1931-chromaticity")
 #pagebreak(weak: true)
 
+== ch06 · half-grey
+#fig("half-grey")
+#pagebreak(weak: true)
+
 == ch07 · transfer-functions
 #fig("transfer-functions")
 #pagebreak(weak: true)

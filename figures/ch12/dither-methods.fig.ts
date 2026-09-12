@@ -25,7 +25,7 @@ const source = (): Image =>
 
 export default defineFigure({
   id: "dither-methods",
-  chapter: "ch15",
+  chapter: "ch12",
   title: "Five ways to lose 5.4 bits",
   caption: `The same greyscale ramp reduced from continuous tone to *three* levels --- black, mid,
     white --- by five different methods. Naive rounding gives the banding you expect. Ordered

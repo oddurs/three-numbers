@@ -15,7 +15,7 @@
 
 == Colour is contextual, and the model is not
 
-#stub(sources: ("fairchild-appearance", "lafer-sousa-2015"), words: 1600)[
+#stub(sources: ("fairchild-appearance", "lafer-sousa-2015"), words: 1100)[
   Simultaneous contrast, the Cornsweet illusion, White's illusion, and the
   checker-shadow. A tristimulus value is a property of a stimulus; a percept is a
   property of a scene. Everything in Parts I to IV computes the first and is routinely
@@ -24,7 +24,7 @@
 
 == Naming, and whether it changes seeing
 
-#stub(words: 1700)[
+#stub(words: 1200)[
   Berlin and Kay's sequence, the Himba and Russian blues experiments, and a careful
   account of what the linguistic-relativity evidence supports --- which is a reliable
   but small effect on discrimination speed, not a different visual world.
@@ -32,7 +32,7 @@
 
 == Colour as meaning
 
-#stub(words: 1400)[
+#stub(words: 1000)[
   Warning red, mourning white, the fact that 'blue' is a young word in many languages
   and that Homer's sea was wine-dark. None of this is in the three numbers, and all of
   it governs what a colour does when you ship it.
@@ -40,7 +40,7 @@
 
 == What a better model would need
 
-#stub(sources: ("fairchild-appearance",), words: 1300)[
+#stub(sources: ("fairchild-appearance",), words: 900)[
   An honest wish list: spatial context, temporal adaptation, material appearance
   beyond colour (gloss, translucency, texture), and individual variation. Point at
   where each is being worked on, and at how far away it is.
@@ -48,7 +48,7 @@
 
 == The case for the model anyway
 
-#stub(words: 1200)[
+#stub(words: 850)[
   Close by earning the whole book back. Three numbers built every display, every
   camera, every print process and every image format you have ever used. A lossy model
   that is this useful is not a failure of ambition; it is what a successful

@@ -26,7 +26,7 @@ export default defineChapter({
         they vary by an order of magnitude, and they are oriented. Any metric that
         ignores this is wrong by a factor of ten somewhere.
       `,
-      words: 1400,
+      words: 1000,
       sources: ["macadam-1942-visual"],
     },
     {
@@ -35,7 +35,7 @@ export default defineChapter({
         Euclidean distance in CIELAB, the reason it was expected to work, and where
         it does not: saturated blues, near-neutrals, and lightness at the extremes.
       `,
-      words: 1200,
+      words: 850,
       figures: ["delta-e-contours"],
       sources: ["cie-15-colorimetry"],
     },
@@ -48,7 +48,7 @@ export default defineChapter({
         implementation against Sharma's published conformance set --- all thirty-
         four pairs --- and say so.
       `,
-      words: 2000,
+      words: 1400,
       figures: ["delta-e-contours"],
       sources: ["sharma-2004-ciede2000"],
     },
@@ -60,7 +60,7 @@ export default defineChapter({
         Tolerancing in print, textiles and manufacturing, and the CMC formula's
         asymmetry as a cautionary tale.
       `,
-      words: 1200,
+      words: 850,
       sources: ["sharma-2004-ciede2000"],
     },
     {
@@ -70,7 +70,7 @@ export default defineChapter({
         to need corrections. Delta-E ITP for HDR, where the old metrics have no
         defined behaviour above 100 nits.
       `,
-      words: 1300,
+      words: 900,
       figures: ["delta-e-contours"],
       sources: ["itu-bt2100", "ottosson-oklab"],
     },

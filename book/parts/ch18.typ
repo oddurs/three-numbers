@@ -13,14 +13,14 @@
 
 == The WCAG 2 formula
 
-#stub(sources: ("wcag-2",), words: 1100)[
+#stub(sources: ("wcag-2",), words: 750)[
   Where the (L1+0.05)/(L2+0.05) ratio comes from, what the 0.05 is doing, and what the
   4.5:1 threshold was calibrated against.
 ]
 
 == Where it fails
 
-#stub(sources: ("apca", "wcag-2"), words: 1500)[
+#stub(sources: ("apca", "wcag-2"), words: 1050)[
   Two documented failure modes: it is roughly symmetric under polarity inversion when
   perception is not, so dark-mode pairs are systematically mis- scored; and it ignores
   font size and weight beyond a single coarse threshold. Show pairs that pass and are
@@ -29,14 +29,14 @@
 
 == APCA and the successor problem
 
-#stub(sources: ("apca",), words: 1300)[
+#stub(sources: ("apca",), words: 900)[
   What a perceptually-grounded replacement looks like, why it is polarity- aware, and
   the standards-politics reality that a better formula must also be adoptable.
 ]
 
 == Contrast beyond text
 
-#stub(sources: ("wcag-2",), words: 1000)[
+#stub(sources: ("wcag-2",), words: 700)[
   Non-text contrast, focus indicators, charts, and the fact that most contrast
   guidance assumes a large uniform patch on a uniform ground, which describes almost
   nothing in a real interface.
@@ -44,7 +44,7 @@
 
 == Dark mode as a colour problem
 
-#stub(words: 1200)[
+#stub(words: 850)[
   Why a naive inversion fails: pure black backgrounds, halation with saturated text,
   and the fact that the eye's adaptation state differs between the two modes so the
   same ratio does not mean the same thing.

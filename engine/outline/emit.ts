@@ -41,7 +41,10 @@ const REASSURANCE: Array<[RegExp, string]> = [
   [/\bactually (?=\w)/g, ""],
   [/\bprecisely (?=the|what|how|which|where)/g, ""],
   [/\bin fact\b,? /g, ""],
-  [/\bhonestly\b,? /g, ""],
+  // Trailing position matters: "measured honestly" ends a heading with no
+  // following space, which a pattern requiring one walks straight past.
+  [/,? \bhonestly\b(?=$|[\s.,;:])/gi, ""],
+  [/\bhonestly\b,? /gi, ""],
 ];
 
 /** Strip the adverbs that assert rigour instead of demonstrating it. */

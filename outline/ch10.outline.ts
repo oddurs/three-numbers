@@ -25,7 +25,7 @@ export default defineChapter({
         the shape it makes in a perceptual space. Constant-hue slices, the cusp, and
         how violently the cusp's position varies with hue.
       `,
-      words: 1500,
+      words: 1050,
       figures: ["oklch-gamut-slice"],
       sources: ["css-color-4"],
     },
@@ -36,7 +36,7 @@ export default defineChapter({
         it rotates it, visibly, and worst exactly where the colour was most
         saturated.
       `,
-      words: 1100,
+      words: 750,
     },
     {
       title: "The CSS Color 4 algorithm",
@@ -45,7 +45,7 @@ export default defineChapter({
         version is within a delta-E of the target. Explain why holding lightness
         rather than chroma is the right default, and implement it in twenty lines.
       `,
-      words: 1400,
+      words: 1000,
       figures: ["oklch-gamut-slice"],
       sources: ["css-color-4"],
     },
@@ -56,7 +56,7 @@ export default defineChapter({
         specifies versus what vendors do, and why 'perceptual' is a vendor's opinion
         rather than a defined transform.
       `,
-      words: 1300,
+      words: 900,
       sources: ["icc-v4"],
     },
     {
@@ -65,7 +65,7 @@ export default defineChapter({
         Shipping P3 on the web, the fallback problem, and how to author once for two
         gamuts without either flattening the wide one or lying about the narrow one.
       `,
-      words: 1100,
+      words: 750,
       sources: ["css-color-4"],
     },
   ],

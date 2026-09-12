@@ -18,7 +18,7 @@ const SPACES: Array<{ space: MixSpace; label: string; note: string }> = [
 
 export default defineFigure({
   id: "interpolation-spaces",
-  chapter: "ch10",
+  chapter: "ch08",
   title: "One gradient, five spaces",
   caption: `Pure blue to pure yellow, interpolated five different ways. Only the endpoints agree.
     The sRGB ramp --- what you get from a naive \`lerp\` on byte values, and from most gradient

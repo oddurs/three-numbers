@@ -26,7 +26,7 @@ export default defineChapter({
         matrix has strong low-frequency content, which is exactly the energy the eye
         is most sensitive to. Derive the matrix rather than tabulating it.
       `,
-      words: 1300,
+      words: 900,
       figures: ["dither-methods"],
     },
     {
@@ -36,7 +36,7 @@ export default defineChapter({
         the worm artefact, and Atkinson's deliberate choice to discard a quarter of
         the error.
       `,
-      words: 1500,
+      words: 1050,
       figures: ["dither-methods"],
       sources: ["floyd-steinberg-1976"],
     },
@@ -47,7 +47,7 @@ export default defineChapter({
         beats error diffusion for anything that has to be evaluated per-pixel in
         parallel. The GPU argument.
       `,
-      words: 1500,
+      words: 1050,
       figures: ["dither-methods"],
       sources: ["ulichney-1993-void"],
     },
@@ -59,7 +59,7 @@ export default defineChapter({
         ordering invert. Give the numbers, and note that a paper reporting raw RMSE
         for a dithering method is reporting the wrong thing.
       `,
-      words: 1200,
+      words: 850,
       figures: ["dither-methods"],
     },
     {
@@ -69,7 +69,7 @@ export default defineChapter({
         Show the difference, which is visible in the midtones and is one of the more
         satisfying one-line fixes in this book.
       `,
-      words: 1000,
+      words: 700,
     },
   ],
 });

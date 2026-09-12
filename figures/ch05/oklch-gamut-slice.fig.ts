@@ -17,7 +17,7 @@ const C_MAX = 0.34;
 
 export default defineFigure({
   id: "oklch-gamut-slice",
-  chapter: "ch12",
+  chapter: "ch05",
   title: "Constant-hue slices through the sRGB gamut",
   caption: `A gamut is a solid, and this is what a vertical slice through it looks like: lightness
     up, chroma across, hue fixed. The pointed corner is the *cusp* --- the most saturated colour of

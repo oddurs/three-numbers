@@ -25,7 +25,7 @@ export default defineChapter({
         depends entirely on which space it is a curve through. Show the same two
         endpoints interpolated five ways.
       `,
-      words: 1300,
+      words: 900,
       figures: ["interpolation-spaces"],
       sources: ["css-color-4"],
     },
@@ -36,7 +36,7 @@ export default defineChapter({
         light goes. Then show the same failure in its other costumes: image
         resizing, box blur, mipmaps, and font antialiasing.
       `,
-      words: 1600,
+      words: 1100,
       figures: ["interpolation-spaces"],
       sources: ["poynton-video"],
     },
@@ -47,7 +47,7 @@ export default defineChapter({
         of the ramp near the bright end. Explain why, and why 'just work in linear'
         is necessary but not sufficient.
       `,
-      words: 1100,
+      words: 750,
     },
     {
       title: "Hue paths",
@@ -57,7 +57,7 @@ export default defineChapter({
         artefact of accidentally taking the long way round through a hue nobody
         asked for.
       `,
-      words: 1000,
+      words: 700,
       figures: ["interpolation-spaces"],
       sources: ["css-color-4"],
     },
@@ -68,7 +68,7 @@ export default defineChapter({
         distinct bugs that come from getting any one of those three wrong. The dark-
         fringe artefact as a diagnostic.
       `,
-      words: 1500,
+      words: 1050,
       sources: ["porter-duff-1984"],
     },
     {
@@ -78,7 +78,7 @@ export default defineChapter({
         defined on linear light, and what the separable/non-separable distinction
         actually means.
       `,
-      words: 900,
+      words: 650,
     },
   ],
 });

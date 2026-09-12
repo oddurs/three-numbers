@@ -14,7 +14,7 @@
 
 == Just-noticeable differences
 
-#stub(sources: ("macadam-1942-visual",), words: 1400)[
+#stub(sources: ("macadam-1942-visual",), words: 1000)[
   MacAdam's experiment and its result: discrimination thresholds are ellipses, they
   vary by an order of magnitude, and they are oriented. Any metric that ignores this
   is wrong by a factor of ten somewhere.
@@ -22,7 +22,7 @@
 
 == CIE76 and its failure
 
-#stub(sources: ("cie-15-colorimetry",), words: 1200)[
+#stub(sources: ("cie-15-colorimetry",), words: 850)[
   Euclidean distance in CIELAB, the reason it was expected to work, and where it does
   not: saturated blues, near-neutrals, and lightness at the extremes.
 ]
@@ -31,7 +31,7 @@
 
 == CIEDE2000, term by term
 
-#stub(figures: ("delta-e-contours",), sources: ("sharma-2004-ciede2000",), words: 2000)[
+#stub(figures: ("delta-e-contours",), sources: ("sharma-2004-ciede2000",), words: 1400)[
   Walk the formula and attribute every term to the failure it repairs: the chroma
   rescaling of $a^*$, the three weighting functions, and the notorious rotation term
   that exists solely to fix the blue region. Verify the implementation against
@@ -40,7 +40,7 @@
 
 == What a delta-E means
 
-#stub(sources: ("sharma-2004-ciede2000",), words: 1200)[
+#stub(sources: ("sharma-2004-ciede2000",), words: 850)[
   A sober section on interpretation. One unit is not one JND except approximately,
   under specific viewing conditions, for large uniform patches. Tolerancing in print,
   textiles and manufacturing, and the CMC formula's asymmetry as a cautionary tale.
@@ -48,7 +48,7 @@
 
 == Oklab, ICtCp, and modern metrics
 
-#stub(figures: ("delta-e-contours",), sources: ("itu-bt2100", "ottosson-oklab"), words: 1300)[
+#stub(figures: ("delta-e-contours",), sources: ("itu-bt2100", "ottosson-oklab"), words: 900)[
   Euclidean distance in Oklab as a claim that the space is uniform enough not to need
   corrections. Delta-E ITP for HDR, where the old metrics have no defined behaviour
   above 100 nits.

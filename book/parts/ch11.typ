@@ -14,14 +14,14 @@
 
 == Von Kries and independent gain control
 
-#stub(sources: ("fairchild-appearance",), words: 1200)[
+#stub(sources: ("fairchild-appearance",), words: 850)[
   The hypothesis: each cone class scales independently to normalise the white. Three
   numbers, three gains. Show that this crude model explains most of what happens.
 ]
 
 == Sharpened bases
 
-#stub(sources: ("fairchild-appearance",), words: 1300)[
+#stub(sources: ("fairchild-appearance",), words: 900)[
   Bradford, CAT02 and CAT16 are all the same three-step construction with a different
   middle basis, and the bases are sharpened *beyond* physiology because doing so
   predicts the data better. That fact deserves a paragraph of discomfort.
@@ -29,21 +29,21 @@
 
 == Doing it in code
 
-#stub(sources: ("icc-v4",), words: 1000)[
+#stub(sources: ("icc-v4",), words: 700)[
   The adaptation matrix as a product of three matrices, the D50/D65 transform that
   every ICC profile contains, and where in a pipeline adaptation belongs.
 ]
 
 == White balance
 
-#stub(words: 1200)[
+#stub(words: 850)[
   Camera white balance as adaptation applied before capture is encoded, illuminant
   estimation as an ill-posed inverse problem, and grey-world and its descendants.
 ]
 
 == The dress
 
-#stub(sources: ("lafer-sousa-2015",), words: 1400)[
+#stub(sources: ("lafer-sousa-2015",), words: 1000)[
   A serious treatment of the 2015 photograph, because it is the best available
   demonstration that colour is an inference. The ambiguity is real, the two answers
   correspond to two different assumptions about the illuminant, and the image

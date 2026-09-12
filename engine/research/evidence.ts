@@ -11,6 +11,7 @@ import type { SourceStore } from "./store.ts";
 import type { FigureDefinition } from "../figures/define.ts";
 import { findCitations } from "./audit.ts";
 import type { Source } from "./source.ts";
+import type { Outline } from "../outline/registry.ts";
 
 export interface ChapterEvidence {
   readonly chapter: string;
@@ -18,8 +19,20 @@ export interface ChapterEvidence {
   readonly figureCount: number;
 }
 
-/** Group cited sources by the chapter directory the citation appears in. */
-export function evidenceByChapter(store: SourceStore, figures: FigureDefinition[]): ChapterEvidence[] {
+/**
+ * Group cited sources by chapter.
+ *
+ * Three places declare a source: prose (`@key`), a figure's `sources`, and —
+ * crucially — the chapter's own outline declaration. The outline is the only
+ * one of the three that exists *before* the chapter is written, which is when
+ * the evidence sheet is most useful. Leaving it out made the sheet empty for
+ * exactly the chapters someone was about to start.
+ */
+export function evidenceByChapter(
+  store: SourceStore,
+  figures: FigureDefinition[],
+  outline?: Outline,
+): ChapterEvidence[] {
   const byChapter = new Map<string, Set<string>>();
   const figCount = new Map<string, number>();
 
@@ -40,6 +53,13 @@ export function evidenceByChapter(store: SourceStore, figures: FigureDefinition[
     }
   }
 
+  for (const { chapter } of outline?.chapters ?? []) {
+    const bucket = byChapter.get(chapter.id) ?? byChapter.set(chapter.id, new Set()).get(chapter.id)!;
+    for (const section of chapter.sections) {
+      for (const key of section.sources ?? []) if (store.byKey.has(key)) bucket.add(key);
+    }
+  }
+
   return [...new Set([...byChapter.keys(), ...figCount.keys()])]
     .sort()
     .map((chapter) => ({
@@ -55,7 +75,11 @@ const citationLine = (s: Source): string => {
   return bits.filter(Boolean).join(". ");
 };
 
-export function renderEvidence(store: SourceStore, figures: FigureDefinition[]): string {
+export function renderEvidence(
+  store: SourceStore,
+  figures: FigureDefinition[],
+  outline?: Outline,
+): string {
   const out: string[] = [
     "# Evidence sheets",
     "",
@@ -64,7 +88,7 @@ export function renderEvidence(store: SourceStore, figures: FigureDefinition[]):
     "",
   ];
 
-  for (const { chapter, sources, figureCount } of evidenceByChapter(store, figures)) {
+  for (const { chapter, sources, figureCount } of evidenceByChapter(store, figures, outline)) {
     out.push(`## ${chapter}`, "");
     out.push(`${sources.length} source${sources.length === 1 ? "" : "s"}, ${figureCount} figure${figureCount === 1 ? "" : "s"}.`, "");
     if (sources.length === 0) {

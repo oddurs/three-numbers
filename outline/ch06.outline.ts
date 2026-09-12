@@ -5,7 +5,7 @@ export default defineChapter({
   number: 6,
   part: "II",
   title: "The Transfer Function",
-  status: "outline",
+  status: "written",
   epigraph: {
     text: `
       The single most expensive misunderstanding in graphics is that a pixel value
@@ -27,7 +27,7 @@ export default defineChapter({
         Modern displays have no such physics and emulate the curve anyway, for
         compatibility.
       `,
-      words: 1400,
+      words: 1150,
       sources: ["poynton-video"],
     },
     {
@@ -37,7 +37,7 @@ export default defineChapter({
         about two percent through the midtones, and catastrophic in the deep shadows
         where the linear toe lives. Name the bug this causes.
       `,
-      words: 1500,
+      words: 900,
       figures: ["transfer-functions"],
       sources: ["css-color-4"],
     },
@@ -49,8 +49,9 @@ export default defineChapter({
         consequences: image downscaling, alpha blending, antialiasing and blur all
         performed in the wrong space, with the same characteristic darkening.
       `,
-      words: 1700,
-      sources: ["poynton-video"],
+      words: 1000,
+      figures: ["half-grey"],
+      sources: ["iec-61966-2-1", "poynton-video"],
     },
     {
       title: "Linear workflows",
@@ -59,7 +60,7 @@ export default defineChapter({
         encode, what to store, and why a 16-bit or float buffer is not optional once
         you decode. The precision argument, quantitatively.
       `,
-      words: 1300,
+      words: 700,
     },
     {
       title: "High dynamic range",
@@ -69,7 +70,7 @@ export default defineChapter({
         encoding, and why HDR forces the question 'how bright is white' to have a
         real answer.
       `,
-      words: 1600,
+      words: 950,
       figures: ["transfer-functions"],
       sources: ["itu-bt2100", "smpte-st2084"],
     },

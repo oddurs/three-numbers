@@ -7,10 +7,10 @@ milestone: v0.6
 depends_on:
 - 53
 created: 2026-09-11
-updated: 2026-09-11
+updated: 2026-09-12
 priority: p1
 chapter: ch14
-words: '6800'
+words: '4750'
 part: IV
 effort: l
 ---

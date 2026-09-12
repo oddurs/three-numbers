@@ -27,7 +27,7 @@ export default defineChapter({
         Anomalous trichromacy versus dichromacy, and why the former is more common
         and less discussed.
       `,
-      words: 1300,
+      words: 900,
       sources: ["stockman-2000-spectral"],
     },
     {
@@ -37,7 +37,7 @@ export default defineChapter({
         meeting at a copunctal point --- the missing cone's own chromaticity. Derive
         this, because it makes everything else obvious.
       `,
-      words: 1400,
+      words: 1000,
       sources: ["brettel-1997-computerized"],
     },
     {
@@ -48,7 +48,7 @@ export default defineChapter({
         from the measured cone fundamentals rather than copying a matrix, and be
         explicit about which LMS basis is being used and why the choice matters.
       `,
-      words: 1800,
+      words: 1250,
       figures: ["cvd-simulation"],
       sources: ["brettel-1997-computerized", "stockman-2000-spectral"],
     },
@@ -59,7 +59,7 @@ export default defineChapter({
         convenience rather than a model, what Machado's approach does instead, and
         how much confidence any of it deserves.
       `,
-      words: 1000,
+      words: 700,
       sources: ["machado-2009-cvd"],
     },
     {
@@ -69,7 +69,7 @@ export default defineChapter({
         Chapter 14, testing under simulation as part of a build rather than as an
         audit, and the specific failure of red-green status indicators.
       `,
-      words: 1300,
+      words: 900,
       figures: ["cvd-simulation"],
     },
   ],

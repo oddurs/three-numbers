@@ -27,7 +27,7 @@ export default defineChapter({
         arithmetic non-linear in any tristimulus coordinate, and why two inks that
         each look fine can overprint to mud.
       `,
-      words: 1400,
+      words: 1000,
       sources: ["wyszecki-stiles"],
     },
     {
@@ -38,7 +38,7 @@ export default defineChapter({
         screening. There is no CMYK-to-RGB matrix and there never can be, which is
         why the conversion needs a measured profile.
       `,
-      words: 1500,
+      words: 1050,
       sources: ["icc-v4"],
     },
     {
@@ -49,7 +49,7 @@ export default defineChapter({
         and cost --- and the resulting choice of how much K to substitute is a
         genuinely free parameter with visible consequences.
       `,
-      words: 1300,
+      words: 900,
       sources: ["icc-v4"],
     },
     {
@@ -59,7 +59,7 @@ export default defineChapter({
         attached: ink spreads. Amplitude-modulated versus frequency-modulated
         screening, and why FM screening is blue noise under another name.
       `,
-      words: 1400,
+      words: 1000,
       sources: ["ulichney-1993-void"],
     },
     {
@@ -68,7 +68,7 @@ export default defineChapter({
         Why Pantone exists, what a spot colour buys that four-colour process cannot,
         and what happens to brand colours that live outside CMYK.
       `,
-      words: 1000,
+      words: 700,
     },
     {
       title: "Profiling a press",
@@ -77,7 +77,7 @@ export default defineChapter({
         is the one place in this book where the only honest answer is to go and
         measure the device.
       `,
-      words: 1200,
+      words: 850,
       sources: ["cie-15-colorimetry", "icc-v4"],
     },
   ],

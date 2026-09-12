@@ -14,14 +14,14 @@
 
 == Median cut and octrees
 
-#stub(sources: ("heckbert-1982-color",), words: 1300)[
+#stub(sources: ("heckbert-1982-color",), words: 900)[
   Heckbert's algorithm, its speed, and its characteristic bias. Octree quantisation as
   the streaming alternative. Both operate on RGB, which is the problem.
 ]
 
 == k-means in a perceptual space
 
-#stub(sources: ("ottosson-oklab",), words: 1200)[
+#stub(sources: ("ottosson-oklab",), words: 850)[
   The same clustering with a metric that means something, and a demonstration of how
   much the choice of space changes the result. k-means++ seeding, and determinism as a
   requirement for reproducible builds.
@@ -29,7 +29,7 @@
 
 == Sequential and diverging ramps
 
-#stub(sources: ("moreland-diverging",), words: 1500)[
+#stub(sources: ("moreland-diverging",), words: 1050)[
   What a colourmap for continuous data owes the reader: monotone lightness above all,
   so that it survives greyscale printing and so that the data's ordering is visible to
   a dichromat. Why the rainbow map fails all of this and why it persists.
@@ -37,7 +37,7 @@
 
 == Categorical palettes
 
-#stub(sources: ("brettel-1997-computerized",), words: 1600)[
+#stub(sources: ("brettel-1997-computerized",), words: 1100)[
   Farthest-point sampling under a perceptual metric, and the key move: measure
   separation as the *worst case* across normal vision and each deficiency, so that a
   pair which only survives trichromacy is rejected during generation rather than
@@ -48,7 +48,7 @@
 
 == The constraint nobody mentions
 
-#stub(figures: ("cvd-simulation",), sources: ("brettel-1997-computerized",), words: 1200)[
+#stub(figures: ("cvd-simulation",), sources: ("brettel-1997-computerized",), words: 850)[
   Beyond about four entries, hue alone cannot separate a palette for a dichromat,
   because dichromacy collapses the hue circle to roughly one dimension. Lightness must
   do the work. Derive the number, and note that the book's own figure palette was

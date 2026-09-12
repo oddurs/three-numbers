@@ -15,7 +15,7 @@
 
 == Spectral power distributions
 
-#stub(sources: ("cie-15-colorimetry",), words: 1500)[
+#stub(sources: ("cie-15-colorimetry",), words: 1050)[
   Define the SPD, its units, and the difference between radiometric and photometric
   quantities --- the distinction that makes 'brightness' ambiguous and 'luminance'
   precise. Introduce the repository's `Spectrum` type as a uniformly sampled function
@@ -27,7 +27,7 @@
 
 == Black bodies and Planck's law
 
-#stub(words: 1700)[
+#stub(words: 1200)[
   Derive the thermal spectrum, in enough detail that the reader sees where the
   constants come from, and show that colour temperature is a real physical
   parameterisation rather than a marketing term. Wien's law as the peak; the Planckian
@@ -38,7 +38,7 @@
 
 == Real sources and their spectra
 
-#stub(sources: ("cvrl-database",), words: 1300)[
+#stub(sources: ("cvrl-database",), words: 900)[
   Daylight, tungsten, fluorescent, LED. The key contrast: thermal sources are smooth,
   and everything else is spiky. Narrow-band sources are why two paints can match in a
   shop and not in a car park.
@@ -46,14 +46,14 @@
 
 == Reflectance, transmittance, and the surface
 
-#stub(words: 1000)[
+#stub(words: 700)[
   Pointwise multiplication, and why 'the colour of an object' is a category error that
   we get away with because daylight is smooth and broadly flat.
 ]
 
 == Standard illuminants
 
-#stub(sources: ("cie-15-colorimetry", "cvrl-database"), words: 1200)[
+#stub(sources: ("cie-15-colorimetry", "cvrl-database"), words: 850)[
   Why the CIE had to standardise light before it could standardise colour. D65, A, E,
   and the daylight locus as a cubic fit to measured sky. Note that the engine computes
   the illuminant A white point from its published SPD and lands within 0.0005 of the

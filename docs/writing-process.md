@@ -89,8 +89,21 @@ useful either way — it still supplies the running order, the word budget, and
 which figures the chapter owns, so later chapters keep cross-referencing rather
 than reprinting them.
 
-Draft to the budget, ±20%. A chapter running 50% long is usually two chapters,
-and finding that out at the outline stage is free.
+Draft to the budget, ±35%. The looser band is the pilot's doing: Chapter 6 was
+budgeted at 7,500 words and came out at 4,388, and the chapter was not thin —
+the budget was a guess made before a single section existed. All remaining
+budgets were rescaled by 0.70 afterwards, which is deliberately gentler than the
+measured 0.585, because one chapter is a sample of one.
+
+So treat the number as a sanity check rather than a target. A section that
+discharges its argument is finished. If a chapter lands well outside the band,
+decide which is wrong — the plan or the draft — before adding words to close
+the gap.
+
+And remember the margin. The budget counts main text, but this page design has
+a 56 mm column beside it, and content there is additional. The first draft of
+Chapter 6 used three margin items and left the column empty for pages at a
+time; the finished chapter has thirteen.
 
 ### 4. Revise
 
@@ -123,10 +136,15 @@ Then set `status: "written"` and close the item.
 | Outline | numbering gaps, starved parts, sections stating a topic instead of an argument |
 | Figures | rendered at the wrong width; placed twice; referenced but never placed; a label the body face cannot draw |
 | Captions | `#4%` parsed as code; a bare `L*` swallowing the paragraph |
+| Prose | code listings wider than the measure; reassurance adverbs; em-dash rate |
 
 It cannot tell whether the argument is sound, whether the chapter earns its
 length, or whether a sentence is worth reading. That is what the revision stage
 and the technical review are for, and no amount of tooling replaces them.
+
+One step has no machine substitute at all: **reading it aloud**. Chapter 6 went
+out with that box deliberately unticked, because ticking it would have made the
+checklist a lie about what had been verified.
 
 ## The passes
 
@@ -149,14 +167,22 @@ item with a stated method so it can be repeated identically:
 
 ## Cadence
 
-The milestone dates in the roadmap are a **guess** until one chapter has been
-written end to end. That is what v0.2 is for: write Chapter 6, measure how long
-each stage actually took, then replace the dates with the measured rate and say
-in the changelog that they changed.
+Chapter 6 was the pilot: self-contained, crisp argument, central figure already
+drawn. You prove a process on a chapter you can write well, not on Chapter 1.
 
-Chapter 6 is the pilot because it is self-contained, its argument is crisp, its
-central figure is already drawn, and it carries the highest-value correction in
-the book. You prove a process on a chapter you can write well, not on Chapter 1.
+It recalibrated the *scope*. The book was planned at 130,600 words and is now
+planned at 90,950, because the per-section budgets were guesses made before a
+single section existed and ran about 40% high.
+
+It did **not** measure the rate. The dates in the roadmap assume 2,000 finished
+words a week, which is a plausible part-time figure for prose at this density and
+nothing more. Record the wall-clock hours per stage on each chapter item; after
+three chapters there is a real number, and the dates should be recomputed from it
+and the change noted in the changelog.
+
+Figure work is the likeliest thing to break the estimate. Drawing the half-grey
+figure took a meaningful fraction of the pilot, and Parts IV and V need several
+times more figures per chapter than Part II did.
 
 ## Adding work
 

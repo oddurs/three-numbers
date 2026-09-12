@@ -27,7 +27,7 @@ export default defineChapter({
         quantisation as the streaming alternative. Both operate on RGB, which is the
         problem.
       `,
-      words: 1300,
+      words: 900,
       sources: ["heckbert-1982-color"],
     },
     {
@@ -37,7 +37,7 @@ export default defineChapter({
         of how much the choice of space changes the result. k-means++ seeding, and
         determinism as a requirement for reproducible builds.
       `,
-      words: 1200,
+      words: 850,
       sources: ["ottosson-oklab"],
     },
     {
@@ -48,7 +48,7 @@ export default defineChapter({
         ordering is visible to a dichromat. Why the rainbow map fails all of this
         and why it persists.
       `,
-      words: 1500,
+      words: 1050,
       sources: ["moreland-diverging"],
     },
     {
@@ -59,7 +59,7 @@ export default defineChapter({
         that a pair which only survives trichromacy is rejected during generation
         rather than caught in review.
       `,
-      words: 1600,
+      words: 1100,
       figures: ["cvd-simulation"],
       sources: ["brettel-1997-computerized"],
     },
@@ -71,7 +71,7 @@ export default defineChapter({
         dimension. Lightness must do the work. Derive the number, and note that the
         book's own figure palette was generated under exactly this constraint.
       `,
-      words: 1200,
+      words: 850,
       figures: ["cvd-simulation"],
       sources: ["brettel-1997-computerized"],
     },

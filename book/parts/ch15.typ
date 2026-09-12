@@ -15,7 +15,7 @@
 
 == Subtractive mixing is multiplication
 
-#stub(sources: ("wyszecki-stiles",), words: 1400)[
+#stub(sources: ("wyszecki-stiles",), words: 1000)[
   Reflectance multiplies where radiance adds. Derive why that makes the arithmetic
   non-linear in any tristimulus coordinate, and why two inks that each look fine can
   overprint to mud.
@@ -23,7 +23,7 @@
 
 == Why CMYK is not a colour space
 
-#stub(sources: ("icc-v4",), words: 1500)[
+#stub(sources: ("icc-v4",), words: 1050)[
   CMYK is a set of *instructions to a device*, not a coordinate system: the same four
   numbers mean different colours on different presses, papers and screening. There is
   no CMYK-to-RGB matrix and there never can be, which is why the conversion needs a
@@ -32,7 +32,7 @@
 
 == Black, and why there are four inks
 
-#stub(sources: ("icc-v4",), words: 1300)[
+#stub(sources: ("icc-v4",), words: 900)[
   Grey component replacement and under-colour removal. Three inks can in principle
   make black; the reasons they do not are register, ink load, drying and cost --- and
   the resulting choice of how much K to substitute is a free parameter with visible
@@ -41,7 +41,7 @@
 
 == Halftones and dot gain
 
-#stub(sources: ("ulichney-1993-void",), words: 1400)[
+#stub(sources: ("ulichney-1993-void",), words: 1000)[
   The screening problem is Chapter 13's dithering problem with physics attached: ink
   spreads. Amplitude-modulated versus frequency-modulated screening, and why FM
   screening is blue noise under another name.
@@ -49,14 +49,14 @@
 
 == Spot colours and the limits of process
 
-#stub(words: 1000)[
+#stub(words: 700)[
   Why Pantone exists, what a spot colour buys that four-colour process cannot, and
   what happens to brand colours that live outside CMYK.
 ]
 
 == Profiling a press
 
-#stub(sources: ("cie-15-colorimetry", "icc-v4"), words: 1200)[
+#stub(sources: ("cie-15-colorimetry", "icc-v4"), words: 850)[
   Measurement, the characterisation target, and the fact that a print pipeline is the
   one place in this book where the only honest answer is to go and measure the device.
 ]

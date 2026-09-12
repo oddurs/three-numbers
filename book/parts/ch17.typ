@@ -14,7 +14,7 @@
 
 == The genetics and the numbers
 
-#stub(sources: ("stockman-2000-spectral",), words: 1300)[
+#stub(sources: ("stockman-2000-spectral",), words: 900)[
   L, M and S cone opsins, why the L and M genes sit adjacent on the X chromosome and
   recombine, and where the prevalence figures come from. Anomalous trichromacy versus
   dichromacy, and why the former is more common and less discussed.
@@ -22,7 +22,7 @@
 
 == Confusion lines
 
-#stub(sources: ("brettel-1997-computerized",), words: 1400)[
+#stub(sources: ("brettel-1997-computerized",), words: 1000)[
   The geometry: a dichromat's confusions are straight lines in chromaticity meeting at
   a copunctal point --- the missing cone's own chromaticity. Derive this, because it
   makes everything else obvious.
@@ -30,7 +30,7 @@
 
 == The Brettel projection
 
-#stub(sources: ("brettel-1997-computerized", "stockman-2000-spectral"), words: 1800)[
+#stub(sources: ("brettel-1997-computerized", "stockman-2000-spectral"), words: 1250)[
   Build the simulation properly: project onto two half-planes hinged on the neutral
   axis, anchored at two specific wavelengths. Derive the half-planes from the measured
   cone fundamentals rather than copying a matrix, and be explicit about which LMS
@@ -41,7 +41,7 @@ Returns to #figref("cvd-simulation").
 
 == Anomalous trichromacy
 
-#stub(sources: ("machado-2009-cvd",), words: 1000)[
+#stub(sources: ("machado-2009-cvd",), words: 700)[
   Why linear interpolation between normal and dichromatic vision is a convenience
   rather than a model, what Machado's approach does instead, and how much confidence
   any of it deserves.
@@ -49,7 +49,7 @@ Returns to #figref("cvd-simulation").
 
 == Designing for it
 
-#stub(words: 1300)[
+#stub(words: 900)[
   Practical consequences: redundant encoding, the lightness constraint from Chapter
   14, testing under simulation as part of a build rather than as an audit, and the
   specific failure of red-green status indicators.

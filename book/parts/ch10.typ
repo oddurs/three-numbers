@@ -13,7 +13,7 @@
 
 == The gamut as a solid
 
-#stub(sources: ("css-color-4",), words: 1500)[
+#stub(sources: ("css-color-4",), words: 1050)[
   Take the RGB cube through the transfer function and the matrix and look at the shape
   it makes in a perceptual space. Constant-hue slices, the cusp, and how violently the
   cusp's position varies with hue.
@@ -23,14 +23,14 @@ Returns to #figref("oklch-gamut-slice").
 
 == Clipping, and what it costs
 
-#stub(words: 1100)[
+#stub(words: 750)[
   Per-channel clamping is the default everywhere. Show what it does to hue --- it
   rotates it, visibly, and worst exactly where the colour was most saturated.
 ]
 
 == The CSS Color 4 algorithm
 
-#stub(sources: ("css-color-4",), words: 1400)[
+#stub(sources: ("css-color-4",), words: 1000)[
   Hold lightness and hue, binary-search chroma, accept when the clipped version is
   within a delta-E of the target. Explain why holding lightness rather than chroma is
   the right default, and implement it in twenty lines.
@@ -40,7 +40,7 @@ Returns to #figref("oklch-gamut-slice").
 
 == Rendering intents
 
-#stub(sources: ("icc-v4",), words: 1300)[
+#stub(sources: ("icc-v4",), words: 900)[
   Perceptual, relative colorimetric, saturation, absolute. What ICC actually specifies
   versus what vendors do, and why 'perceptual' is a vendor's opinion rather than a
   defined transform.
@@ -48,7 +48,7 @@ Returns to #figref("oklch-gamut-slice").
 
 == Wider gamuts in practice
 
-#stub(sources: ("css-color-4",), words: 1100)[
+#stub(sources: ("css-color-4",), words: 750)[
   Shipping P3 on the web, the fallback problem, and how to author once for two gamuts
   without either flattening the wide one or lying about the narrow one.
 ]

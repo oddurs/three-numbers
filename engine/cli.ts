@@ -42,6 +42,7 @@ import { serializeSource } from "./research/source.ts";
 import { loadFigures } from "./figures/registry.ts";
 import { lintFigures } from "./figures/lint.ts";
 import { verifyFigures } from "./figures/verify.ts";
+import { lintBook } from "./book/lint.ts";
 import { loadOutline } from "./outline/registry.ts";
 import { syncOutline, renderOutlineDoc } from "./outline/emit.ts";
 import { validateOutline, countOutlineIssues } from "./outline/validate.ts";
@@ -351,12 +352,25 @@ async function cmdCheck(): Promise<void> {
   );
   if (orphans.length && flag("all")) for (const o of orphans) log.detail(`unplaced: ${o.id}`);
 
+  log.step("prose");
+  const prose = lintBook();
+  for (const i of prose) {
+    const line = `${i.file}:${i.line} [${i.code}] ${i.message}`;
+    if (i.severity === "error") { log.error(line); ok = false; } else if (flag("all")) { log.warn(line); }
+  }
+  const proseWarnings = prose.filter((i) => i.severity === "warning").length;
+  log.ok(
+    `${plural(prose.filter((i) => i.severity === "error").length, "error")}, ` +
+    `${plural(proseWarnings, "voice warning")}${proseWarnings && !flag("all") ? style.grey(" — pass --all to see them") : ""}`,
+  );
+
   log.step("outline");
   try {
     const outline = await loadOutline();
     let sourceKeys = new Set<string>();
     try { sourceKeys = new Set(loadSources().byKey.keys()); } catch { /* reported below */ }
-    const issues = validateOutline(outline, { figureIds, sourceKeys });
+    const figureChapters = new Map(figures.map((f) => [f.id, f.chapter]));
+    const issues = validateOutline(outline, { figureIds, sourceKeys, figureChapters });
     const counts = countOutlineIssues(issues);
     for (const i of issues.filter((x) => x.severity === "error")) {
       log.error(`${i.where} [${i.code}] ${i.message}`);
@@ -505,7 +519,8 @@ async function cmdResearch(): Promise<void> {
 
   if (sub === "evidence") {
     const file = join(paths.buildResearch, "evidence.md");
-    writeFileSync(file, renderEvidence(store, figures));
+    const outline = await loadOutline();
+    writeFileSync(file, renderEvidence(store, figures, outline));
     log.ok(`wrote ${relative(paths.root, file)}`);
     return;
   }
@@ -759,10 +774,11 @@ async function cmdOutline(): Promise<void> {
   if (sub === "sync" || sub === "check") {
     const figures = (await loadFigures()).map((f) => f.def);
     const figureIds = new Set(figures.map((f) => f.id));
+    const figureChapters = new Map(figures.map((f) => [f.id, f.chapter]));
     let sourceKeys = new Set<string>();
     try { sourceKeys = new Set(loadSources().byKey.keys()); } catch { /* reported by cite check */ }
 
-    const issues = validateOutline(outline, { figureIds, sourceKeys });
+    const issues = validateOutline(outline, { figureIds, sourceKeys, figureChapters });
     const counts = countOutlineIssues(issues);
     const mark = { error: style.red("error"), warning: style.yellow("warn "), info: style.grey("info ") };
     for (const i of flag("all") ? issues : issues.filter((x) => x.severity !== "info")) {

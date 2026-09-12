@@ -26,7 +26,7 @@ export default defineChapter({
         therefore a projective map: straight lines are preserved, which is why
         additive mixtures lie on chords, and *nothing else is*.
       `,
-      words: 1200,
+      words: 850,
       figures: ["cie-1931-chromaticity"],
       sources: ["cie-15-colorimetry"],
     },
@@ -38,7 +38,7 @@ export default defineChapter({
         every printed version of this diagram actually are --- which is: made up,
         because the page cannot show them.
       `,
-      words: 1400,
+      words: 1000,
       figures: ["cie-1931-chromaticity"],
     },
     {
@@ -49,7 +49,7 @@ export default defineChapter({
         colours are close on the chromaticity diagram' is unfounded, and the
         widespread practice of comparing gamut *areas* on it is worse.
       `,
-      words: 1600,
+      words: 1100,
       sources: ["macadam-1942-visual"],
     },
     {
@@ -59,7 +59,7 @@ export default defineChapter({
         rounder and is still not uniform. Useful as a lesson in how far a linear-
         fractional fix can take you.
       `,
-      words: 1000,
+      words: 700,
       sources: ["cie-15-colorimetry"],
     },
     {
@@ -69,7 +69,7 @@ export default defineChapter({
         plus correlated colour temperature and why a single number for 'how blue is
         this white' requires a metric that the diagram does not have.
       `,
-      words: 1300,
+      words: 900,
       figures: ["blackbody-spectra"],
     },
   ],

@@ -9,7 +9,7 @@ const band = (s: ReturnType<typeof samples>) =>
 
 export default defineFigure({
   id: "colour-matching-functions",
-  chapter: "ch04",
+  chapter: "ch03",
   title: "The CIE 1931 colour-matching functions",
   caption: `The three curves that define human colour vision for standards purposes. They are not
     cone sensitivities: they are a deliberately chosen linear recombination of the cone responses,

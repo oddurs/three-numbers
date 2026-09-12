@@ -14,7 +14,7 @@
 
 == Texture encoding and hardware sRGB
 
-#stub(sources: ("poynton-video",), words: 1400)[
+#stub(sources: ("poynton-video",), words: 1000)[
   Why sRGB texture formats exist, what the hardware does, and the specific bug of
   filtering an sRGB texture without the sRGB flag: the GPU interpolates code values
   and the result is dark.
@@ -22,14 +22,14 @@
 
 == Scene-linear working spaces
 
-#stub(sources: ("aces-system",), words: 1200)[
+#stub(sources: ("aces-system",), words: 850)[
   Why ACEScg rather than linear sRGB: negative values, wide-gamut light sources, and
   the fact that a renderer's intermediate values are radiance, not colour.
 ]
 
 == Tone mapping
 
-#stub(sources: ("aces-system",), words: 1700)[
+#stub(sources: ("aces-system",), words: 1200)[
   The problem statement: map an unbounded radiance range onto a bounded display.
   Reinhard, filmic curves, and the ACES output transform as three points on a spectrum
   from arbitrary to principled. What each does to hue.
@@ -37,7 +37,7 @@
 
 == Colour in shaders
 
-#stub(words: 1300)[
+#stub(words: 900)[
   Practical rules: what to store, when to decode, why to do lighting in linear and
   grading in a perceptual space, and the cost of an Oklab conversion in a fragment
   shader --- with the actual instruction count.
@@ -45,7 +45,7 @@
 
 == The output chain
 
-#stub(sources: ("itu-bt2100",), words: 1100)[
+#stub(sources: ("itu-bt2100",), words: 750)[
   Swapchain formats, display profiles, HDR metadata, and the depressing gap between
   what an application asks for and what the compositor does.
 ]

@@ -9,7 +9,7 @@ import type { Vec3 } from "../../engine/color/math.ts";
 
 export default defineFigure({
   id: "lightness-comparison",
-  chapter: "ch08",
+  chapter: "ch07",
   title: "What three models think lightness is",
   caption: `Sweep the hue circle at constant HSL lightness 0.5 and constant saturation 1, and ask
     three models how light each colour is. HSL says --- by construction --- that they are all

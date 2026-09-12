@@ -26,7 +26,7 @@ export default defineChapter({
         Three numbers, three gains. Show that this crude model explains most of what
         happens.
       `,
-      words: 1200,
+      words: 850,
       sources: ["fairchild-appearance"],
     },
     {
@@ -37,7 +37,7 @@ export default defineChapter({
         because doing so predicts the data better. That fact deserves a paragraph of
         discomfort.
       `,
-      words: 1300,
+      words: 900,
       sources: ["fairchild-appearance"],
     },
     {
@@ -46,7 +46,7 @@ export default defineChapter({
         The adaptation matrix as a product of three matrices, the D50/D65 transform
         that every ICC profile contains, and where in a pipeline adaptation belongs.
       `,
-      words: 1000,
+      words: 700,
       sources: ["icc-v4"],
     },
     {
@@ -56,7 +56,7 @@ export default defineChapter({
         illuminant estimation as an ill-posed inverse problem, and grey-world and
         its descendants.
       `,
-      words: 1200,
+      words: 850,
     },
     {
       title: "The dress",
@@ -66,7 +66,7 @@ export default defineChapter({
         answers correspond to two different assumptions about the illuminant, and
         the image genuinely underdetermines the question.
       `,
-      words: 1400,
+      words: 1000,
       sources: ["lafer-sousa-2015"],
     },
   ],

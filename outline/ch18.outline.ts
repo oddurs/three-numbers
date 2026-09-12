@@ -25,7 +25,7 @@ export default defineChapter({
         Where the (L1+0.05)/(L2+0.05) ratio comes from, what the 0.05 is doing, and
         what the 4.5:1 threshold was calibrated against.
       `,
-      words: 1100,
+      words: 750,
       sources: ["wcag-2"],
     },
     {
@@ -37,7 +37,7 @@ export default defineChapter({
         threshold. Show pairs that pass and are unreadable, and pairs that fail and
         are fine.
       `,
-      words: 1500,
+      words: 1050,
       sources: ["apca", "wcag-2"],
     },
     {
@@ -47,7 +47,7 @@ export default defineChapter({
         aware, and the standards-politics reality that a better formula must also be
         adoptable.
       `,
-      words: 1300,
+      words: 900,
       sources: ["apca"],
     },
     {
@@ -57,7 +57,7 @@ export default defineChapter({
         guidance assumes a large uniform patch on a uniform ground, which describes
         almost nothing in a real interface.
       `,
-      words: 1000,
+      words: 700,
       sources: ["wcag-2"],
     },
     {
@@ -67,7 +67,7 @@ export default defineChapter({
         text, and the fact that the eye's adaptation state differs between the two
         modes so the same ratio does not mean the same thing.
       `,
-      words: 1200,
+      words: 850,
     },
   ],
 });
